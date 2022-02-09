@@ -11,14 +11,7 @@ npx create-react-app client
 In **/client directory**
 
 ```bash
-
-```
-
-### Edit Files
-
-#### ``
-
-```
+npm install @mui/material @emotion/react @emotion/styled
 ```
 
 ---
