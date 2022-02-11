@@ -1,14 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 
+import { GlobalContext } from './context/GlobalState.js'
+
 export const AddJobForm = () => {
+  const { addJob } = useContext(GlobalContext);
+
 
   let date = new Date()
   let today = `${date.getMonth() + 1}/${date.getDate()}`
 
   // Primary Info
-  const [id, setId] = useState(Math.random() * 100)
+  const [id, setId] = useState('')
   const [dateApplied, setDateApplied] = useState(`${today}`)
   const [company, setCompany] = useState('')
   const [jobTitle, setJobTitle] = useState('')
@@ -23,7 +27,7 @@ export const AddJobForm = () => {
     e.preventDefault()
 
     const newJob = {
-      id,
+      id: Math.random() * 100000000,
       dateApplied,
       company,
       jobTitle,
@@ -32,7 +36,8 @@ export const AddJobForm = () => {
       statusUpdate
     }
 
-    console.log(newJob); // Set Jobs
+    addJob(newJob);
+    console.log(newJob);
 
     setDateApplied(`${today}`)
     setCompany('')
