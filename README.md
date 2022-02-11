@@ -5,6 +5,9 @@ This app...
 ### Frontend
 
 #### React
+- Context API
+- React Icons
+- Bootstrap
 
 ### Backend
 

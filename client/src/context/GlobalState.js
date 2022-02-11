@@ -6,28 +6,30 @@ const initialState = {
   jobs: [
     {
       id: "1",
-      dateApplied: 28,
+      dateApplied: '2/11',
       company:'This Company',
       jobTitle:"G",
       status: 'Applied',
-      lastContact: 28,
-      statusUpdate: 'Applied'
+      lastContact: '2/11',
+      statusUpdate: 'Applied',
+      link:'#'
     },
     {
       id:"2",
-      dateApplied: 28,
+      dateApplied: '2/11',
       company:'That Company',
       jobTitle:"M",
       status: 'Phone',
-      lastContact: 28,
+      lastContact: '2/11',
       statusUpdate: 'Phone'
     },
     {
-      dateApplied: 28,
+      id:"3",
+      dateApplied: '2/11',
       company:'A Company',
       jobTitle:"K",
       status: 'Rejected',
-      lastContact: 28,
+      lastContact: '2/11',
       statusUpdate: 'Rejected'
     }
   ]

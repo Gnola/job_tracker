@@ -1,12 +1,9 @@
 import React, { useState, useContext } from 'react'
-import TextField from '@mui/material/TextField';
-import Button from '@mui/material/Button';
 
 import { GlobalContext } from './context/GlobalState.js'
 
 export const AddJobForm = () => {
   const { addJob } = useContext(GlobalContext);
-
 
   let date = new Date()
   let today = `${date.getMonth() + 1}/${date.getDate()}`
@@ -20,8 +17,15 @@ export const AddJobForm = () => {
   const [lastContact, setLastContact] = useState(`${today}`)
   const [statusUpdate, setStatusUpdate] = useState('')
 
-  // Secondary Info
   const [link, setLink] = useState('')
+  const [category, setCategory] = useState('')
+  const [location, setLocation] = useState('')
+  const [connections, setConnections] = useState('')
+  const [jobBoard, setJobBoard] = useState('')
+  const [resume, setResume] = useState('')
+  const [notes, setNotes] = useState('')
+  console.log(status);
+
 
   const handleAddJob = (e) => {
     e.preventDefault()
@@ -33,11 +37,17 @@ export const AddJobForm = () => {
       jobTitle,
       status,
       lastContact,
-      statusUpdate
+      statusUpdate,
+      link,
+      category,
+      location,
+      connections,
+      jobBoard,
+      resume,
+      notes
     }
 
     addJob(newJob);
-    console.log(newJob);
 
     setDateApplied(`${today}`)
     setCompany('')
@@ -45,21 +55,84 @@ export const AddJobForm = () => {
     setStatus('Potential')
     setLastContact(`${today}`)
     setStatusUpdate('')
+    setLink('')
+    setCategory('')
+    setLocation('')
+    setConnections('')
+    setJobBoard('')
+    setResume('')
+    setNotes('')
   }
 
 
   return (
     <form onSubmit={handleAddJob}>
-      <TextField id='textfield' type='text' variant='outlined' value={dateApplied} onChange={(e) => setDateApplied(e.target.value)} />
-      <TextField id='textfield' type='text' variant='outlined' value={company} onChange={(e) => setCompany(e.target.value)} placeholder='Company Name'/>
-      <TextField id='textfield' type='text' variant='outlined' value={jobTitle} onChange={(e) => setJobTitle(e.target.value)} placeholder='Job Title'/>
-      <TextField id='textfield' type='text' variant='outlined' value={status} onChange={(e) => setStatus(e.target.value)} />
-      <TextField id='textfield' type='text' variant='outlined' value={lastContact} onChange={(e) => setLastContact(e.target.value)} />
-      <TextField id='textfield' type='text' variant='outlined' value={statusUpdate} onChange={(e) => setStatusUpdate(e.target.value)} placeholder='Last Status Update'/>
+      <h5 style={{textAlign: 'center'}}>Primary Info</h5>
+      <div className='form-group'>
+        <label htmlFor="dateApplied">Date Applied</label>
+        <input type='text' className="form-control" id='dateApplied' value={dateApplied} onChange={(e) => setDateApplied(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="company">Company Name</label>
+        <input type='text' className="form-control" id='company' value={company} onChange={(e) => setCompany(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="jobTitle">Job Title</label>
+        <input type='text' className="form-control" id='jobTitle' value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}/>
+      </div>
+      <div className='form-group'>
+        <label htmlFor="status">Status</label>
+        <br/>
+        <select id='status' className="custom-select" value={status} onChange={(e) => setStatus(e.target.value)}>
+          <option value="Potential">Potential</option>
+          <option value="Applied">Applied</option>
+          <option value="Phone Screen">Phone Screen</option>
+          <option value="Technical Interview">Technical Interview</option>
+          <option value="Behavioral Interview">Behavioral Interview</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Never Heard Back">Never Heard Back</option>
+          <option value="Offer">Offer</option>
+        </select>
+      </div>
+      <div className='form-group'>
+        <label htmlFor="lastContact">Last Contacted</label>
+        <input type='text' className="form-control" id='lastContact' value={lastContact} onChange={(e) => setLastContact(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="statusUpdate">Latest Status Update</label>
+        <input type='text' className="form-control" id='statusUpdate' value={statusUpdate} onChange={(e) => setStatusUpdate(e.target.value)} />
+      </div>
+      <h5 style={{textAlign: 'center'}}>Secondary Info</h5>
+      <div className='form-group'>
+        <label htmlFor="link">Link</label>
+        <input type='text' className="form-control" id='link' value={link} onChange={(e) => setLink(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="category">Category</label>
+        <input type='text' className="form-control" id='category' value={category} onChange={(e) => setCategory(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="location">Location(s)</label>
+        <input type='text' className="form-control" id='location' value={location} onChange={(e) => setLocation(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="connections">Connection(s)</label>
+        <input type='text' className="form-control" id='connections' value={connections} onChange={(e) => setConnections(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="jobBoard">Job Board</label>
+        <input type='text' className="form-control" id='jobBoard' value={jobBoard} onChange={(e) => setJobBoard(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="resume">Resume Used</label>
+        <input type='text' className="form-control" id='resume' value={resume} onChange={(e) => setResume(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="notes">Notes</label>
+        <input type='text' className="form-control" id='notes' value={notes} onChange={(e) => setNotes(e.target.value)} />
+      </div>
       <br/>
-      <TextField id='textfield' type='text' variant='outlined' value={link} onChange={(e) => setLink(e.target.value)} placeholder='Link'/>
-      <br/>
-      <Button type='submit' variant='contained'>Add</Button>
+      <button type='submit' className='btn btn-primary'>Add</button>
     </form>
   )
 }
