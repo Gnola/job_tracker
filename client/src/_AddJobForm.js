@@ -37,7 +37,7 @@ export const AddJobForm = () => {
       jobTitle,
       status,
       lastContact,
-      statusUpdate,
+      statusUpdate: status,
       link,
       category,
       location,
@@ -47,14 +47,13 @@ export const AddJobForm = () => {
       notes
     }
 
+    console.log(newJob);
     addJob(newJob);
 
     setDateApplied(`${today}`)
     setCompany('')
     setJobTitle('')
-    setStatus('Potential')
-    setLastContact(`${today}`)
-    setStatusUpdate('')
+    setStatus('')
     setLink('')
     setCategory('')
     setLocation('')
@@ -67,7 +66,6 @@ export const AddJobForm = () => {
 
   return (
     <form onSubmit={handleAddJob}>
-      <h5 style={{textAlign: 'center'}}>Primary Info</h5>
       <div className='form-group'>
         <label htmlFor="dateApplied">Date Applied</label>
         <input type='text' className="form-control" id='dateApplied' value={dateApplied} onChange={(e) => setDateApplied(e.target.value)} />
@@ -80,29 +78,6 @@ export const AddJobForm = () => {
         <label htmlFor="jobTitle">Job Title</label>
         <input type='text' className="form-control" id='jobTitle' value={jobTitle} onChange={(e) => setJobTitle(e.target.value)}/>
       </div>
-      <div className='form-group'>
-        <label htmlFor="status">Status</label>
-        <br/>
-        <select id='status' className="custom-select" value={status} onChange={(e) => setStatus(e.target.value)}>
-          <option value="Potential">Potential</option>
-          <option value="Applied">Applied</option>
-          <option value="Phone Screen">Phone Screen</option>
-          <option value="Technical Interview">Technical Interview</option>
-          <option value="Behavioral Interview">Behavioral Interview</option>
-          <option value="Rejected">Rejected</option>
-          <option value="Never Heard Back">Never Heard Back</option>
-          <option value="Offer">Offer</option>
-        </select>
-      </div>
-      <div className='form-group'>
-        <label htmlFor="lastContact">Last Contacted</label>
-        <input type='text' className="form-control" id='lastContact' value={lastContact} onChange={(e) => setLastContact(e.target.value)} />
-      </div>
-      <div className='form-group'>
-        <label htmlFor="statusUpdate">Latest Status Update</label>
-        <input type='text' className="form-control" id='statusUpdate' value={statusUpdate} onChange={(e) => setStatusUpdate(e.target.value)} />
-      </div>
-      <h5 style={{textAlign: 'center'}}>Secondary Info</h5>
       <div className='form-group'>
         <label htmlFor="link">Link</label>
         <input type='text' className="form-control" id='link' value={link} onChange={(e) => setLink(e.target.value)} />
@@ -130,6 +105,19 @@ export const AddJobForm = () => {
       <div className='form-group'>
         <label htmlFor="notes">Notes</label>
         <input type='text' className="form-control" id='notes' value={notes} onChange={(e) => setNotes(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="status">Status</label>
+        <select id='status' className="custom-select" value={status} onChange={(e) => setStatus(e.target.value)}>
+          <option value="Potential">Potential</option>
+          <option value="Applied">Applied</option>
+          <option value="Phone Screen">Phone Screen</option>
+          <option value="Technical Interview">Technical Interview</option>
+          <option value="Behavioral Interview">Behavioral Interview</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Never Heard Back">Never Heard Back</option>
+          <option value="Offer">Offer</option>
+        </select>
       </div>
       <br/>
       <button type='submit' className='btn btn-primary'>Add</button>

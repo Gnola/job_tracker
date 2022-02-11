@@ -11,9 +11,9 @@ function App() {
   return (
     <GlobalProvider>
       <div className="App">
-        <AddJobForm/>
-        <br/>
         <JobList />
+        <br/>
+        <AddJobForm/>
       </div>
     </GlobalProvider>
   );
