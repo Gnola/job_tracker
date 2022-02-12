@@ -7,6 +7,10 @@
 .orange {
   background: 'orange'
 }
-.red {
-  background: 'red'
+.bold {
+  font-weight: bold;
+}
+
+.job {
+  background: lightgrey;
 }

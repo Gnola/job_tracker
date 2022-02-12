@@ -24,9 +24,9 @@ export const JobList = () => {
         <thead>
           <tr>
             <th scope='col'></th>
-            <th scope='col'>Status</th>
             <th scope='col'>Company</th>
             <th scope='col'>Job Title</th>
+            <th scope='col'>Status</th>
             <th scope='col'>Last Updated</th>
             <th scope='col'>Latest Update</th>
           </tr>

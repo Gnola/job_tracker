@@ -4,23 +4,25 @@ import { GlobalContext } from './context/GlobalState.js'
 
 export const AddJobForm = () => {
   const { addJob, today } = useContext(GlobalContext);
+
   console.log(today);
 
   const [id, setId] = useState('') // only used for key
-  const [status, setStatus] = useState('Potential')
+
   const [company, setCompany] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [link, setLink] = useState('')
+  const [status, setStatus] = useState('Potential')
 
-  const [category, setCategory] = useState('')
-  const [location, setLocation] = useState('')
-  const [connections, setConnections] = useState('')
   const [jobBoard, setJobBoard] = useState('')
   const [resume, setResume] = useState('')
+  const [location, setLocation] = useState('')
+  const [category, setCategory] = useState('')
+  const [connections, setConnections] = useState('')
   const [notes, setNotes] = useState('')
 
-  const [updatedDate, setUpdatedDate] = useState('')
-  const [latestUpdate, setLatestUpdate] = useState('')
+  const [updateDate, setUpdateDate] = useState('')
+  const [updateNotes, setUpdateNotes] = useState('')
 
 
   const handleAddJob = (e) => {
@@ -28,18 +30,23 @@ export const AddJobForm = () => {
 
     const newJob = {
       id: Math.random() * 100000000, // just used for key
-      status,
       company,
       jobTitle,
       link,
-      category,
-      location,
-      connections,
+      status,
       jobBoard,
       resume,
+      location,
+      category,
+      connections,
       notes,
-      updatedDate: `${today}`,
-      latestUpdate: notes ? `${status} - ${notes}` : `${status}`
+      updates: [
+        {
+          statusUpdate: status,
+          updateDate: `${today}`,
+          updateNotes: !notes ? '-' : notes
+        }
+      ]
     }
 
     console.log(newJob);
