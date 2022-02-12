@@ -7,8 +7,7 @@ export const Job = ({job}) => {
   return (
     <>
       <tr scope='row'>
-        <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline /> : <IoChevronUpOutline/>}</td>
-        <td>{job.dateApplied}</td>
+        <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline style={{cursor:'pointer'}} /> : <IoChevronUpOutline style={{cursor:'pointer'}} />}</td>
         <td>{job.status}</td>
         <td>{job.company}</td>
         <td><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
@@ -17,12 +16,12 @@ export const Job = ({job}) => {
       </tr>
       <tr className={jobOpened ? null: 'hide'}>
         <td></td>
-        <td>Category: {job.category}</td>
-        <td>Location(s): {job.location}</td>
+        <td>Category: <strong>{job.category}</strong></td>
+        <td>Location(s): <strong>{job.location}</strong></td>
         <td>Connection(s): {job.connections}</td>
-        <td>Job Board: {job.jobBoard}</td>
-        <td>Resume Used: {job.resume}</td>
-        <td>Notes: {job.notes}</td>
+        <td>Job Board: <strong>{job.jobBoard}</strong></td>
+        <td>Resume: <strong>{job.resume}</strong></td>
+        <td>Notes: <strong>{job.notes}</strong></td>
       </tr>
     </>
   )

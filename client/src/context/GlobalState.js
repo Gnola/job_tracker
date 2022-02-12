@@ -32,7 +32,8 @@ const initialState = {
       lastContact: '2/11',
       statusUpdate: 'Rejected'
     }
-  ]
+  ],
+  today: `${new Date().getMonth() + 1}/${new Date().getDate()}`
 }
 
 
@@ -53,7 +54,8 @@ export const GlobalProvider = ({ children }) => {
   return (
     <GlobalContext.Provider value={{
       jobs:state.jobs,
-      addJob
+      addJob,
+      today:state.today
     }}>
       { children }
     </GlobalContext.Provider>
