@@ -6,31 +6,21 @@ const initialState = {
   jobs: [
     {
       id: "1",
-      dateApplied: '2/11',
+      status: 'Applied',
       company:'This Company',
       jobTitle:"G",
-      status: 'Applied',
-      lastContact: '2/11',
-      statusUpdate: 'Applied',
-      link:'#'
     },
     {
       id:"2",
-      dateApplied: '2/11',
+      status: 'Phone',
       company:'That Company',
       jobTitle:"M",
-      status: 'Phone',
-      lastContact: '2/11',
-      statusUpdate: 'Phone'
     },
     {
       id:"3",
-      dateApplied: '2/11',
+      status: 'Rejected',
       company:'A Company',
       jobTitle:"K",
-      status: 'Rejected',
-      lastContact: '2/11',
-      statusUpdate: 'Rejected'
     }
   ],
   today: `${new Date().getMonth() + 1}/${new Date().getDate()}`

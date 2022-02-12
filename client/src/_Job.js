@@ -11,17 +11,16 @@ export const Job = ({job}) => {
         <td>{job.status}</td>
         <td>{job.company}</td>
         <td><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
-        <td>{job.lastContact}</td>
-        <td>{job.statusUpdate}</td>
+        <td>{job.updatedDate}</td>
+        <td>{job.latestUpdate}</td>
       </tr>
       <tr className={jobOpened ? null: 'hide'}>
         <td></td>
-        <td>Category: <strong>{job.category}</strong></td>
-        <td>Location(s): <strong>{job.location}</strong></td>
-        <td>Connection(s): {job.connections}</td>
         <td>Job Board: <strong>{job.jobBoard}</strong></td>
         <td>Resume: <strong>{job.resume}</strong></td>
-        <td>Notes: <strong>{job.notes}</strong></td>
+        <td>Location(s): <strong>{job.location}</strong></td>
+        <td>Category: <strong>{job.category}</strong></td>
+        <td>Connection(s): {job.connections}</td>
       </tr>
     </>
   )

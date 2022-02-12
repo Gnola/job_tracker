@@ -6,14 +6,12 @@ export const AddJobForm = () => {
   const { addJob, today } = useContext(GlobalContext);
   console.log(today);
 
-  const [id, setId] = useState('')
+  const [id, setId] = useState('') // only used for key
+  const [status, setStatus] = useState('Potential')
   const [company, setCompany] = useState('')
   const [jobTitle, setJobTitle] = useState('')
-  const [status, setStatus] = useState('Potential')
-  const [updatedDate, setUpdatedDate] = useState(`${today}`)
-  const [latestUpdate, setLatestUpdate] = useState('')
-
   const [link, setLink] = useState('')
+
   const [category, setCategory] = useState('')
   const [location, setLocation] = useState('')
   const [connections, setConnections] = useState('')
@@ -21,38 +19,41 @@ export const AddJobForm = () => {
   const [resume, setResume] = useState('')
   const [notes, setNotes] = useState('')
 
+  const [updatedDate, setUpdatedDate] = useState('')
+  const [latestUpdate, setLatestUpdate] = useState('')
+
 
   const handleAddJob = (e) => {
     e.preventDefault()
 
     const newJob = {
-      id: Math.random() * 100000000,
+      id: Math.random() * 100000000, // just used for key
+      status,
       company,
       jobTitle,
-      status,
-      updatedDate,
-      latestUpdate,
       link,
       category,
       location,
       connections,
       jobBoard,
       resume,
-      notes
+      notes,
+      updatedDate: `${today}`,
+      latestUpdate: notes ? `${status} - ${notes}` : `${status}`
     }
 
     console.log(newJob);
     addJob(newJob);
 
+    setStatus('Potential')
     setCompany('')
     setJobTitle('')
-    setStatus('')
     setLink('')
+    setJobBoard('')
+    setResume('')
     setCategory('')
     setLocation('')
     setConnections('')
-    setJobBoard('')
-    setResume('')
     setNotes('')
   }
 
@@ -85,24 +86,24 @@ export const AddJobForm = () => {
         <input type='text' className="form-control" id='link' value={link} onChange={(e) => setLink(e.target.value)} />
       </div>
       <div className='form-group'>
-        <label htmlFor="category">Category</label>
-        <input type='text' className="form-control" id='category' value={category} onChange={(e) => setCategory(e.target.value)} />
-      </div>
-      <div className='form-group'>
-        <label htmlFor="location">Location(s)</label>
-        <input type='text' className="form-control" id='location' value={location} onChange={(e) => setLocation(e.target.value)} />
-      </div>
-      <div className='form-group'>
-        <label htmlFor="connections">Connection(s)</label>
-        <input type='text' className="form-control" id='connections' value={connections} onChange={(e) => setConnections(e.target.value)} />
-      </div>
-      <div className='form-group'>
         <label htmlFor="jobBoard">Job Board</label>
         <input type='text' className="form-control" id='jobBoard' value={jobBoard} onChange={(e) => setJobBoard(e.target.value)} />
       </div>
       <div className='form-group'>
         <label htmlFor="resume">Resume Used</label>
         <input type='text' className="form-control" id='resume' value={resume} onChange={(e) => setResume(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="location">Location(s)</label>
+        <input type='text' className="form-control" id='location' value={location} onChange={(e) => setLocation(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="category">Category</label>
+        <input type='text' className="form-control" id='category' value={category} onChange={(e) => setCategory(e.target.value)} />
+      </div>
+      <div className='form-group'>
+        <label htmlFor="connections">Connection(s)</label>
+        <input type='text' className="form-control" id='connections' value={connections} onChange={(e) => setConnections(e.target.value)} />
       </div>
       <div className='form-group'>
         <label htmlFor="notes">Notes</label>
