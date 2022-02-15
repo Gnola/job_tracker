@@ -11,6 +11,7 @@ export const AddJobForm = () => {
 
   const [id, setId] = useState('') // only used for key
 
+  const [date, setDate] = useState(today)
   const [company, setCompany] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [link, setLink] = useState('')
@@ -32,6 +33,7 @@ export const AddJobForm = () => {
 
     const newJob = {
       id: uuidv4(),
+      date,
       company,
       jobTitle,
       link,
@@ -46,7 +48,7 @@ export const AddJobForm = () => {
         {
           id: uuidv4(),
           statusUpdate: status,
-          updateDate: `${today}`,
+          updateDate: date,
           updateNotes: !notes ? '-' : notes
         }
       ]
@@ -84,6 +86,10 @@ export const AddJobForm = () => {
         <option value="Never Heard Back">Never Heard Back</option>
         <option value="Offer">Offer</option>
       </select>
+    </div>
+    <div className='form-group'>
+      <label htmlFor="date">Date</label>
+      <input type='text' className="form-control" id='date' value={date} onChange={(e) => setDate(e.target.value)} />
     </div>
       <div className='form-group'>
         <label htmlFor="company">Company Name</label>

@@ -1,4 +1,4 @@
-import React, { useState, useContext } from 'react';
+import React, { useState, useContext, useEffect } from 'react';
 import {IoChevronDownOutline, IoChevronUpOutline, IoAddCircleSharp, IoTrashSharp} from "react-icons/io5";
 import { GlobalContext } from './context/GlobalState.js'
 import axios from 'axios';
@@ -9,10 +9,34 @@ export const Job = ({job}) => {
   const { today } = useContext(GlobalContext);
 
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
+  const [color, setColor] = useState('') // Toggle extra job info
+
+
 
   const [statusUpdate, setStatusUpdate] = useState(job.updates.length >= 1 ? job.updates[0].statusUpdate: job.status)
   const [updateDate, setUpdateDate] = useState(today)
   const [updateNotes, setUpdateNotes] = useState('')
+
+  useEffect(() => {
+    switch (job.status) {
+      case 'Potential':
+        setColor('lightgreen')
+        break;
+      case 'Applied':
+        setColor('orange')
+        break;
+      case 'Phone Screen':
+        setColor('green')
+        break;
+      case 'Rejected':
+        setColor('red')
+        break;
+      default:
+      setColor('white')
+
+    }
+  })
+
 
   const createUpdate = () => {
     let newUpdate = {
@@ -57,7 +81,7 @@ export const Job = ({job}) => {
         <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline style={{cursor:'pointer'}} /> : <IoChevronUpOutline style={{cursor:'pointer'}} />}</td>
         <td className={jobOpened ? 'bold' : null}>{job.company}</td>
         <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
-        <td className={jobOpened ? 'bold' : null}>{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
+        <td style={{color}} className={jobOpened ? 'bold' : null}>{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
         {!jobOpened && <td onClick={() => deleteJob(job)}><IoTrashSharp/></td>}

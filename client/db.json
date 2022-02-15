@@ -1,84 +1,771 @@
 {
   "jobs": [
     {
-      "id": "1",
-      "status": "Applied",
-      "company": "This Company",
-      "jobTitle": "G",
-      "updates": [
-        {
-          "statusUpdate": "Saved",
-          "updateDate": "2/9",
-          "updateNotes": "Something"
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "status": "Phone",
-      "company": "That Company",
-      "jobTitle": "M",
-      "updates": [
-        {
-          "statusUpdate": "Applied",
-          "updateDate": "2/10",
-          "updateNotes": "Some more notes"
-        },
-        {
-          "statusUpdate": "Saved",
-          "updateDate": "2/9",
-          "updateNotes": "Some notes"
-        }
-      ]
-    },
-    {
-      "id": "3",
+      "id": "4cbca756-2d89-4904-ad24-bde981e68bd4",
+      "date": "1/7",
+      "company": "Vector",
+      "jobTitle": "Solutions Engineer",
+      "link": "https://www.withvector.com/company/careers?gh_jid=4019568004",
       "status": "Rejected",
-      "company": "A Company",
-      "jobTitle": "K",
+      "jobBoard": "-",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "Remote",
+      "category": "Logistics",
+      "connections": "Kenny",
+      "notes": "",
       "updates": [
         {
-          "statusUpdate": "Potential",
-          "updateDate": "2/10",
-          "updateNotes": "Some more notes"
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "status": "Active",
-      "company": "A Company",
-      "jobTitle": "L",
-      "updates": [
-        {
-          "statusUpdate": "Active",
-          "updateDate": "2/15",
-          "updateNotes": ""
+          "id": "b54b1407-de3c-4e82-b72f-07f2a3e90c99",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/9",
+          "updateNotes": "-"
         },
         {
-          "statusUpdate": "Potential",
-          "updateDate": "2/10",
-          "updateNotes": "Some more notes"
+          "id": "9fd2329a-f3ed-4b98-a98f-8a78c4dc3977",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "1/13",
+          "updateNotes": "Talked with Anthony"
+        },
+        {
+          "id": "f6078eb8-5949-4e73-9f1e-597612ec91f6",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "1/7",
+          "updateNotes": "Talked with Maegan"
+        },
+        {
+          "id": "0233fc6a-536a-49c9-9193-dde0e115ffbf",
+          "statusUpdate": "Applied",
+          "updateDate": "1/7",
+          "updateNotes": "-"
         }
       ]
     },
     {
-      "id": "7210a6aa-e283-48d0-afa5-1bb57939706a",
-      "company": "skdhfkjsjdf",
-      "jobTitle": "",
+      "id": "90fd2aa3-f6f6-4495-9cc1-c087b7fefb13",
+      "date": "1/17",
+      "company": "Aaptiv",
+      "jobTitle": "Software Engineer",
+      "link": "https://angel.co/jobs?job_listing_id=1867191",
+      "status": "Rejected",
+      "jobBoard": "Angellist",
+      "resume": "-",
+      "location": "-",
+      "category": "Health/Fitness",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "a3cd1473-efdd-457e-a728-d3f0e08b2487",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        },
+        {
+          "id": "081a90d6-6c8d-4d73-afa0-632e91e59805",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "44233b90-c379-4d14-9fbe-efcf48d8ef07",
+      "date": "1/17",
+      "company": "Afresh",
+      "jobTitle": "Software Engineer (New Grad)",
+      "link": "https://boards.greenhouse.io/afresh/jobs/4204899004?gh_src=37a2d7404us",
+      "status": "Applied",
+      "jobBoard": "BuiltIn",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "0f131b30-8519-45a1-b915-6e66da347097",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "048e8b08-0ab6-404d-a758-79d1f6a26f50",
+      "date": "1/17",
+      "company": "Bold",
+      "jobTitle": "Full Stack Software Engineer",
+      "link": "https://angel.co/jobs?job_listing_id=587391",
+      "status": "Rejected",
+      "jobBoard": "Angellist",
+      "resume": "-",
+      "location": "-",
+      "category": "Health/Fitness",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "7a7966e0-ccad-4f8e-a8de-8c379b5392ea",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/19",
+          "updateNotes": "-"
+        },
+        {
+          "id": "bf2fbaae-716a-4885-bf0f-d1f8ab229ff0",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "a10a9fcd-aee3-4609-b29d-751b3eed7d5a",
+      "date": "1/17",
+      "company": "Cloverly",
+      "jobTitle": "Frontend Developer",
       "link": "",
       "status": "Applied",
-      "jobBoard": "",
-      "resume": "",
+      "jobBoard": "Climatebase",
+      "resume": "-",
+      "location": "-",
+      "category": "Climate",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "bb1fd64d-7f8a-44dc-9c95-b21d4a577b36",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "4d665eb8-17d5-49cd-841b-ab760aa0db13",
+      "date": "1/17",
+      "company": "Dandy",
+      "jobTitle": "Software Engineer",
+      "link": "",
+      "status": "Rejected",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "Health/Fitness",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "c0c8d30c-051c-47d2-95d5-eb9377fa6a3b",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/18",
+          "updateNotes": "-"
+        },
+        {
+          "id": "482f79e5-896b-442b-8962-8703a99884e4",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "794e6219-82d5-465e-abcc-261e26581c1b",
+      "date": "1/17",
+      "company": "Evidently",
+      "jobTitle": "Frontend / Full Stack",
+      "link": "https://triplebyte.com/company/public/evidently-inc/QWStsBW/frontend-fullstack?fm=%7B%22match_count%22%3A2%2C%22total_count%22%3A2%2C%22matches%22%3A%5B%7B%22label%22%3A%22Will%20talk%20to%20juniors%22%2C%22values%22%3A%5B%22Yes%22%5D%7D%2C%7B%22label%22%3A%22engineering_type%22%2C%22values%22%3A%5B%22Full-Stack%20Engineer%22%2C%22Front-End%20Engineer%22%5D%7D%5D%2C%22mismatches%22%3A%5B%5D%7D",
+      "status": "Phone Screen",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "Health/Fitness",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "7907ebf5-a29d-4120-90ed-73c00458616a",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "1/21",
+          "updateNotes": "Talked with Alex - Reaching out in month+"
+        },
+        {
+          "id": "c891c6d9-298d-462e-aef8-2818c247a113",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "4da17a3f-1728-4a2b-94e0-3164d987a83a",
+      "date": "1/17",
+      "company": "Recurrent",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://boards.greenhouse.io/recurrent/jobs/5732162002?utm_source=climatebase",
+      "status": "Applied",
+      "jobBoard": "Climatebase",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "Climate",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "8b82a75d-6abf-4f80-a2e8-23f46474059d",
+          "statusUpdate": "Applied",
+          "updateDate": "1/17",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "bf044e91-94ec-4eda-9a0a-cf077a836abb",
+      "date": "1/20",
+      "company": "Hearth",
+      "jobTitle": "Full Stack Engineer",
+      "link": "https://triplebyte.com/company/public/hearth/Rc8gqqc/full-stack-engineer",
+      "status": "Applied",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "FinTech",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "6b8df6f9-68b7-4c72-beb6-01a108fdcffb",
+          "statusUpdate": "Applied",
+          "updateDate": "2/1",
+          "updateNotes": "Email about potential \"Never Heard Back\""
+        },
+        {
+          "id": "410e3b55-8970-4177-94dd-3b347a3e6aa0",
+          "statusUpdate": "Applied",
+          "updateDate": "1/20",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "cc3e12d4-dc71-4792-9731-f2b78be35ea2",
+      "date": "1/20",
+      "company": "Watershed",
+      "jobTitle": "Full Stack Engineer",
+      "link": "https://boards.greenhouse.io/watershedclimate/jobs/4058547004",
+      "status": "Applied",
+      "jobBoard": "Climatebase",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "Climate",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "e6a8bb89-b940-4b68-827b-12e164456d2c",
+          "statusUpdate": "Applied",
+          "updateDate": "1/20",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "dc7c056d-fc56-4f1f-bdd3-68ad398d63fd",
+      "date": "1/20",
+      "company": "Arch",
+      "jobTitle": "Full Stack Engineer",
+      "link": "https://triplebyte.com/company/public/arch/Y3FWRcc/full-stack-engineer?fm=%7B%22match_count%22%3A1%2C%22total_count%22%3A1%2C%22matches%22%3A%5B%7B%22label%22%3A%22Will%20talk%20to%20juniors%22%2C%22values%22%3A%5B%22Yes%22%5D%7D%5D%2C%22mismatches%22%3A%5B%5D%7D",
+      "status": "Rejected",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "b5476c70-4f34-47fd-8f4f-84fd8afcf311",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/27",
+          "updateNotes": "-"
+        },
+        {
+          "id": "a21c8fdc-8bb1-4c84-bb94-4ec11e221bee",
+          "statusUpdate": "Applied",
+          "updateDate": "1/20",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "1ce0b055-3dd7-4a8b-a8cf-1d143a0e929e",
+      "date": "1/24",
+      "company": "Candid",
+      "jobTitle": "Founding Engineer",
+      "link": "https://triplebyte.com/company/public/candid-1/Zz0UwnS/founding-engineer-engineering?fm=%7B%22match_count%22%3A1%2C%22total_count%22%3A1%2C%22matches%22%3A%5B%7B%22label%22%3A%22Will%20talk%20to%20juniors%22%2C%22values%22%3A%5B%22Yes%22%5D%7D%5D%2C%22mismatches%22%3A%5B%5D%7D",
+      "status": "Applied",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "24b2803d-2f0c-4192-85b5-b19676a35246",
+          "statusUpdate": "Applied",
+          "updateDate": "2/2",
+          "updateNotes": "Email about potential \"Never Heard Back\""
+        },
+        {
+          "id": "c07b6684-82cb-4f3a-bd40-f11149259b0c",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "65a98cf8-0aa5-4404-a484-80193cfd82cf",
+      "date": "1/24",
+      "company": "Co-op Commerce",
+      "jobTitle": "React Software Engineer",
+      "link": "https://jobs.lever.co/CO-OPCOMMERCE/b3d64e46-067c-4261-af80-3fa7dd350c57/apply?lever-source=LinkedIn",
+      "status": "Potential",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "",
+      "connections": "",
+      "notes": "",
+      "updates": [
+        {
+          "id": "bf793f2f-5cf0-4796-9d8c-8bd3abb75359",
+          "statusUpdate": "Potential",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "ed03533e-a4e5-4ff0-8ce5-95cb93e2fdf6",
+      "date": "1/24",
+      "company": "EvolutionIQ",
+      "jobTitle": "Software Engineer",
+      "link": "https://boards.greenhouse.io/evolutioniq/jobs/4286239004?s=LinkedIn&source=LinkedIn",
+      "status": "Potential",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "64a8a7b8-31c7-4adc-ba92-cbb0dec346f0",
+          "statusUpdate": "Potential",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "76da66ef-dc73-445f-98e5-156642f74cfd",
+      "date": "1/24",
+      "company": "GitBit",
+      "jobTitle": "Software Engineer",
+      "link": "https://angel.co/jobs?job_listing_id=1898483",
+      "status": "Potential",
+      "jobBoard": "Angellist",
+      "resume": "-",
       "location": "",
       "category": "",
       "connections": "",
       "notes": "",
       "updates": [
         {
-          "id": "6cfb8a9e-8cfc-4ac8-9711-bacef436521a",
+          "id": "19f72c42-17d2-4b5f-b9e3-5130a1a93ec4",
+          "statusUpdate": "Potential",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "2f0be1a1-6f45-4bf7-bae3-068803b51081",
+      "date": "1/24",
+      "company": "Groove",
+      "jobTitle": "Frontend Developer",
+      "link": "https://jobs.lever.co/grooveapp/aa2e8702-8e19-4a53-bbad-ecc32f998007",
+      "status": "Phone Screen",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "96b6e2b9-245e-4ff3-99ef-37ca7f6fc17d",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "2/18",
+          "updateNotes": "-"
+        },
+        {
+          "id": "2183ec45-3f98-4422-8c45-d29fbd221512",
           "statusUpdate": "Applied",
-          "updateDate": "2/15",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "e74a0c12-04aa-48a9-890b-511c891e3f4e",
+      "date": "1/24",
+      "company": "Ontra",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://www.ontra.ai/jobs/?gh_jid=5489517002&gh_src=a13c9dc72us",
+      "status": "Rejected",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "56b180c9-0fdf-4b6c-bdfa-58a9beded154",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/25",
+          "updateNotes": "-"
+        },
+        {
+          "id": "864a2d43-bec4-445b-b43e-d835bb76718d",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "56a55413-0884-476e-bf19-c9e452128df4",
+      "date": "1/24",
+      "company": "Paxos",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://paxos.com/careers/role/?gh_jid=5626380002",
+      "status": "Rejected",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "c6ae2fd7-01e4-4ea4-82f3-e6eb3b3fa69c",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/26",
+          "updateNotes": "-"
+        },
+        {
+          "id": "9efd91c8-5d95-4481-9a5b-6291a9232ce5",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "ce84681f-0cb8-4a95-926b-70571aa44418",
+      "date": "1/24",
+      "company": "SuperMove",
+      "jobTitle": "Full Stack Engineer",
+      "link": "https://triplebyte.com/company/public/supermove/Sfjp0p8/software-engineer-full-stack?fm=%7B%22match_count%22%3A1%2C%22total_count%22%3A1%2C%22matches%22%3A%5B%7B%22label%22%3A%22Will%20talk%20to%20juniors%22%2C%22values%22%3A%5B%22Yes%22%5D%7D%5D%2C%22mismatches%22%3A%5B%5D%7D",
+      "status": "Applied",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "826e02e5-5a32-427c-adf0-8f271dc8d893",
+          "statusUpdate": "Applied",
+          "updateDate": "2/2",
+          "updateNotes": "Email about potential \"Never Heard Back\""
+        },
+        {
+          "id": "3dbf8f1b-c6ed-41c0-9c99-47e31a566ca7",
+          "statusUpdate": "Potential",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "81bcf880-2fc3-450f-9ef9-738147f04a86",
+      "date": "1/24",
+      "company": "Yogi",
+      "jobTitle": "Jr Software Engineer",
+      "link": "https://angel.co/jobs?job_listing_id=1903943",
+      "status": "Rejected",
+      "jobBoard": "Angellist",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "a7089c4e-13a7-4128-b615-12f5b22b4117",
+          "statusUpdate": "Rejected",
+          "updateDate": "1/25",
+          "updateNotes": "-"
+        },
+        {
+          "id": "188cc291-07ad-46da-898a-18e37bf9aa3f",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "61c2395d-279a-4cbe-b219-fcf182926e5e",
+      "date": "1/25",
+      "company": "Compass",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://www.linkedin.com/jobs/view/2789169110/?refId=33e40410-13db-4950-bae3-96c09cf58a2b",
+      "status": "Applied",
+      "jobBoard": "LinkedIn",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "2d63cdbb-d0fe-4d2a-80b1-b4b130ef43cd",
+          "statusUpdate": "Applied",
+          "updateDate": "1/25",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "986863b7-8678-4404-b9de-0ef5222edfac",
+      "date": "1/25",
+      "company": "Lightmatter",
+      "jobTitle": "Software Engineer",
+      "link": "https://angel.co/jobs?job_listing_id=1867560",
+      "status": "Applied",
+      "jobBoard": "Angellist",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "5967fadd-2511-47a8-a1d9-519ec90bab62",
+          "statusUpdate": "Applied",
+          "updateDate": "1/25",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "fdeebcfb-8e44-4d0f-b315-83a42c7630c6",
+      "date": "1/25",
+      "company": "Salesloft",
+      "jobTitle": "Jr Software Engineer",
+      "link": "https://www.linkedin.com/jobs/view/2876641582/?refId=33e40410-13db-4950-bae3-96c09cf58a2b&trk=flagship3_job_home_savedjobs",
+      "status": "Applied",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "ff22f937-8774-43ba-8e15-7698ffe70db4",
+          "statusUpdate": "Applied",
+          "updateDate": "1/25",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "a1a3cf7e-229d-42d8-9a3a-ae6fed85955d",
+      "date": "1/26",
+      "company": "Barti",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://boards.greenhouse.io/applytobarti/jobs/4200231004",
+      "status": "Rejected",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "Hybrid (SF)",
+      "category": "Healthcare",
+      "connections": "Colton, Allan",
+      "notes": "",
+      "updates": [
+        {
+          "id": "994059be-2995-442b-ac85-0041faeefd21",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/8",
+          "updateNotes": "-"
+        },
+        {
+          "id": "ddfba471-ae50-426e-a30e-559869372991",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "2/7",
+          "updateNotes": "Talked with Allan"
+        },
+        {
+          "id": "aeaa4db7-f9b8-48ba-9e27-7df828f36611",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "2/4",
+          "updateNotes": "Talked with Colton"
+        },
+        {
+          "id": "0339a468-6fbf-4c03-93d6-3b3a40d64ed9",
+          "statusUpdate": "Applied",
+          "updateDate": "1/26",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "a32b12f4-7a0b-481d-af93-d0ac28ec2826",
+      "date": "1/26",
+      "company": "Launch Darkly",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://boards.greenhouse.io/launchdarkly/jobs/4176206003?gh_src=05b95efd3us",
+      "status": "Rejected",
+      "jobBoard": "Company Site",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "Remote (Oak)",
+      "category": "DevTools",
+      "connections": "Halie",
+      "notes": "",
+      "updates": [
+        {
+          "id": "8eb6f952-3a7a-46c5-b192-c4e3a68528f4",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/11",
+          "updateNotes": "-"
+        },
+        {
+          "id": "2820df42-5c97-4e28-908b-356e4d6e582a",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "2/3",
+          "updateNotes": "Talked with Julia"
+        },
+        {
+          "id": "f7030a21-92c6-4b38-a70d-894e50b2a105",
+          "statusUpdate": "Applied",
+          "updateDate": "1/26",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "94fe24db-fe3f-49d0-96a1-ab50b0024628",
+      "date": "1/27",
+      "company": "Mark43",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://triplebyte.com/company/public/mark43/NQnu4y6/front-end-engineer",
+      "status": "Applied",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "1299d846-92f8-4732-8ceb-dfb3ff06742f",
+          "statusUpdate": "Applied",
+          "updateDate": "2/8",
+          "updateNotes": "Email about potential \"Never Heard Back\""
+        },
+        {
+          "id": "3fc6c734-669b-413e-9fb4-aa34d0dd68fd",
+          "statusUpdate": "Applied",
+          "updateDate": "1/27",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "c041656b-15c5-405b-bdac-5707f4550a13",
+      "date": "2/9",
+      "company": "Evergrow",
+      "jobTitle": "Sr Software Engineer",
+      "link": "https://climatebase.org/job/59899/software-engineer?utm_source=profile_job_alert",
+      "status": "Rejected",
+      "jobBoard": "Climatebase",
+      "resume": "G",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "bf23523a-f8d7-496f-a2ae-35ddaa507792",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/9",
+          "updateNotes": "-"
+        },
+        {
+          "id": "ff695df5-9fdf-483d-9c5a-9b40bbd534be",
+          "statusUpdate": "Applied",
+          "updateDate": "2/9",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "98076a0c-7eae-43ed-a29c-2a74165e8bb3",
+      "date": "2/9",
+      "company": "Atlassian",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://angel.co/jobs?job_listing_id=1957169",
+      "status": "Applied",
+      "jobBoard": "Angellist",
+      "resume": "-",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "9e3e4139-9255-4951-be57-0c3ebdb6bbc7",
+          "statusUpdate": "Applied",
+          "updateDate": "2/9",
+          "updateNotes": "-"
+        }
+      ]
+    },
+    {
+      "id": "3745fe6b-15fc-46f0-a1c0-5bc0dfb8bedc",
+      "date": "2/9",
+      "company": "Equilibrium Energy",
+      "jobTitle": "Frontend Engineer",
+      "link": "https://climatebase.org/job/59874/front-end-software-engineer?utm_source=profile_job_alert",
+      "status": "Applied",
+      "jobBoard": "Climatebase",
+      "resume": "Gianni_Nola_Resume_2022",
+      "location": "-",
+      "category": "-",
+      "connections": "-",
+      "notes": "",
+      "updates": [
+        {
+          "id": "437f7cae-4f8d-44c5-bceb-bca55a37645c",
+          "statusUpdate": "Applied",
+          "updateDate": "2/9",
           "updateNotes": "-"
         }
       ]
