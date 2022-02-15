@@ -1,13 +1,11 @@
 import React, { useState, useContext } from 'react';
 import './App.css';
 import { Job } from './_Job.js'
+// import { GlobalContext } from './context/GlobalState.js'
 
-import { GlobalContext } from './context/GlobalState.js'
+export const JobList = ({ jobs }) => {
 
-export const JobList = () => {
-
-  const { jobs } = useContext(GlobalContext);
-
+  // const { jobs } = useContext(GlobalContext);
   const [clicked, setClicked] = useState('all')
 
   return (

@@ -1,4 +1,6 @@
 import React, { useState, useContext } from 'react'
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 
 import { GlobalContext } from './context/GlobalState.js'
 
@@ -29,7 +31,7 @@ export const AddJobForm = () => {
     e.preventDefault()
 
     const newJob = {
-      id: Math.random() * 100000000, // just used for key
+      id: uuidv4(),
       company,
       jobTitle,
       link,
@@ -42,6 +44,7 @@ export const AddJobForm = () => {
       notes,
       updates: [
         {
+          id: uuidv4(),
           statusUpdate: status,
           updateDate: `${today}`,
           updateNotes: !notes ? '-' : notes
@@ -50,7 +53,9 @@ export const AddJobForm = () => {
     }
 
     console.log(newJob);
-    addJob(newJob);
+    // addJob(newJob);
+    axios.post('http://localhost:3001/jobs/', newJob).then(res => console.log(res.data))
+
 
     setStatus('Potential')
     setCompany('')
