@@ -7,16 +7,11 @@ import { GlobalContext } from './context/GlobalState.js'
 import { JobUpdate } from './_JobUpdate.js'
 import { AddJobUpdate } from './_AddJobUpdate.js'
 
-export const Job = ({job}) => {
+export const Job = ({job, setJobToEdit, setEditJob, editJob}) => {
 
   const { today } = useContext(GlobalContext); // From GlobalState
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
   const [statusColor, setStatusColor] = useState('') // Sets status color
-
-  // Update variables
-  const [statusUpdate, setStatusUpdate] = useState(job.updates.length >= 1 ? job.updates[0].statusUpdate: job.status)
-  const [updateDate, setUpdateDate] = useState(today)
-  const [updateNotes, setUpdateNotes] = useState('')
 
   const [editing, setEditing] = useState(false)
   const [editedSection, setEditedSection] = useState('')
@@ -127,7 +122,10 @@ export const Job = ({job}) => {
         <td style={{color:statusColor}} className={jobOpened ? 'bold' : null}>{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
-        {!jobOpened ? <td><IoPencilSharp style={{cursor:'pointer'}}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
+        {!jobOpened ? <td onClick={() => {
+          setEditJob(!editJob)
+          setJobToEdit(job)
+        }}><IoPencilSharp style={{cursor:'pointer'}}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
       </tr>
       { jobOpened &&
         <>

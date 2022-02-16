@@ -1,8 +1,10 @@
 import React, { useState, useContext } from 'react';
 // import './App.css';
 import { Job } from './_Job.js'
+import EditJobForm from './_EditJobForm.js'
 
-export const JobList = ({ jobs }) => {
+
+export const JobList = ({ jobs, setJobToEdit, setEditJob, editJob }) => {
 
   const [clicked, setClicked] = useState('all') // Controls Filtered Jobs
   const [filteredJobs, setFilteredJobs] = useState(jobs)
@@ -94,9 +96,9 @@ export const JobList = ({ jobs }) => {
         <tbody>
           {
             filteredJobs.length === 0 ?
-            jobs.map((job) => (<Job key={job.id} job={job}/>))
+            jobs.map((job) => (<Job key={job.id} job={job} setJobToEdit={setJobToEdit} setEditJob={setEditJob} editJob={editJob}/>))
             :
-            filteredJobs.map((job) => (<Job key={job.id} job={job}/>))
+            filteredJobs.map((job) => (<Job key={job.id} job={job} setJobToEdit={setJobToEdit} setEditJob={setEditJob} editJob={editJob}/>))
           }
         </tbody>
       </table>

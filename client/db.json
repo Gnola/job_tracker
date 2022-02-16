@@ -791,6 +791,28 @@
           "updateNotes": "Talked with Nettie - Waiting to hear back"
         }
       ]
+    },
+    {
+      "id": "56d77567-0403-40a1-9594-a7f208e5be04",
+      "date": "2/16",
+      "company": "Testing",
+      "jobTitle": "Title",
+      "link": "",
+      "status": "Potential",
+      "jobBoard": "",
+      "resume": "",
+      "location": "",
+      "category": "",
+      "connections": "",
+      "notes": "",
+      "updates": [
+        {
+          "id": "053961c9-2ce5-4cf7-8ac9-195ec2b032f4",
+          "statusUpdate": "Potential",
+          "updateDate": "2/16",
+          "updateNotes": "-"
+        }
+      ]
     }
   ]
 }
