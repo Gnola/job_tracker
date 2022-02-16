@@ -769,6 +769,28 @@
           "updateNotes": "-"
         }
       ]
+    },
+    {
+      "id": "9e455174-84a6-492a-b40e-4c4549d47e9d",
+      "date": "2/11",
+      "company": "Politech",
+      "jobTitle": "Software Engineer",
+      "link": "",
+      "status": "Phone Screen",
+      "jobBoard": "TripleByte",
+      "resume": "-",
+      "location": "",
+      "category": "",
+      "connections": "",
+      "notes": "Talked with Nettie - Waiting to hear back",
+      "updates": [
+        {
+          "id": "f9c64488-a0e3-47d3-948e-e48e17b6e4c8",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "2/11",
+          "updateNotes": "Talked with Nettie - Waiting to hear back"
+        }
+      ]
     }
   ]
 }

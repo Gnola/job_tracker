@@ -1,22 +1,20 @@
 # Job Tracker
 
-This app...
+This is a full CRUD app that helps track job applications from start to finish
 
 ### Frontend
 
 #### React
-- Context API
-- React Icons
+- Context API?
 - Bootstrap
+- React Icons
+- UUID
 
-### Backend
+### Backend / Databases
 
-This project does **not** have a backend
+#### axios
 
-### Databases
-
-This project does **not** use a DB
-
+#### [json-server](https://github.com/typicode/json-server)
 
 ### APIs / Data
 

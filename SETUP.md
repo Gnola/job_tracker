@@ -11,7 +11,8 @@ npx create-react-app client
 In **/client directory**
 
 ```bash
-  npm i react-icons --save
+  npm i react-icons axios uuid --save
+  npm i -g json-server
 ```
 
 ### Add Bootstrap CDN to `index.html`
@@ -25,6 +26,7 @@ In **/client directory**
 
 ### Run Locally
 
-| Location | Command      | Runs         | URL                     | Access |
-| :------- | :----------- | :----------- | :---------------------- | :----- |
-| /client  |  `npm start` | **Frontend** | *http::/localhost/3000* | Site   |
+| Location | Command                                    | Runs         | URL                          | Access |
+| :------- | :----------------------------------------- | :----------- | :--------------------------- | :----- |
+| /client  |  `npm start`                               | **Frontend** | *http::/localhost/3000*      | Site   |
+| /client  |  `json-server --watch db.json --port 3001` | **Server**   | *http::/localhost/3001/jobs* | Data   |

@@ -104,7 +104,7 @@ export const Job = ({job}) => {
           <tr className={jobOpened ? 'job': null}>
             <td></td>
             <td></td>
-            <td><button type='button' className='btn btn-primary sm' onClick={() => createUpdate()}><IoAddCircleSharp style={{fontSize:'1.5rem'}} /></button></td>
+            <td></td>
             <td>
               <select className="form-select" value={statusUpdate} onChange={(e) => setStatusUpdate(e.target.value)}>
                 <option value="Potential">Potential</option>
@@ -123,6 +123,7 @@ export const Job = ({job}) => {
             <td>
               <input type='text' className="form-control" value={updateNotes} onChange={(e) => setUpdateNotes(e.target.value)}/>
             </td>
+            <td><button type='button' className='btn btn-primary sm' onClick={() => createUpdate()}><IoAddCircleSharp style={{fontSize:'1.5rem'}} /></button></td>
           </tr>
           <tr className={jobOpened ? 'job': null}>
             <td></td>
