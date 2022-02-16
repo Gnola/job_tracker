@@ -1,19 +1,18 @@
 import React, { useState, useContext } from 'react';
-import './App.css';
+// import './App.css';
 import { Job } from './_Job.js'
-// import { GlobalContext } from './context/GlobalState.js'
 
 export const JobList = ({ jobs }) => {
 
-  // const { jobs } = useContext(GlobalContext);
-  const [clicked, setClicked] = useState('all')
+  const [clicked, setClicked] = useState('all') // Controls Filtered Jobs
   const [filteredJobs, setFilteredJobs] = useState(jobs)
 
+  // Filter jobs on button click
   const handleClick = (text) => {
     switch (text) {
       case 'all':
         setClicked('all')
-        setFilteredJobs(jobs)
+        setFilteredJobs(jobs) // Set filteredJobs as default data
         break;
       case 'potential':
         setClicked('potential')
@@ -28,7 +27,7 @@ export const JobList = ({ jobs }) => {
         setFilteredJobs(jobs.filter(job => job.status == 'Rejected'))
         break;
       default:
-        setFilteredJobs(jobs)
+        setFilteredJobs(jobs) // Set filteredJobs as default data
     }
   }
 

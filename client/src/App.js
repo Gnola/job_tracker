@@ -1,26 +1,23 @@
 import React, { useState, useEffect } from 'react';
+import './App.css';
 import axios from 'axios';
 
-import './App.css';
-import {JobList} from './_JobList.js';
-import {AddJobForm} from './_AddJobForm.js';
-
 import { GlobalProvider } from './context/GlobalState.js'
+import { AddJobForm } from './_AddJobForm.js';
+import { JobList } from './_JobList.js';
+
 
 function App() {
-
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data]))
-    // console.log(jobs);
+    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data])) // Set State Initially
   }, [])
 
   return (
     <GlobalProvider>
       <div className="App">
         <JobList jobs={jobs}/>
-        <br/>
         <AddJobForm setJobs={setJobs}/>
       </div>
     </GlobalProvider>

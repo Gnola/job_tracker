@@ -1,18 +1,17 @@
 import React, { useState, useContext, useEffect } from 'react';
-import {IoChevronDownOutline, IoChevronUpOutline, IoAddCircleSharp, IoTrashSharp} from "react-icons/io5";
-import { GlobalContext } from './context/GlobalState.js'
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
+import {IoChevronDownOutline, IoChevronUpOutline, IoAddCircleSharp, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
 
+import { GlobalContext } from './context/GlobalState.js'
 
 export const Job = ({job}) => {
-  const { today } = useContext(GlobalContext);
 
+  const { today } = useContext(GlobalContext); // From GlobalState
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
-  const [color, setColor] = useState('') // Toggle extra job info
+  const [statusColor, setStatusColor] = useState('') // Sets status color
 
-
-
+  // Update variables
   const [statusUpdate, setStatusUpdate] = useState(job.updates.length >= 1 ? job.updates[0].statusUpdate: job.status)
   const [updateDate, setUpdateDate] = useState(today)
   const [updateNotes, setUpdateNotes] = useState('')
@@ -20,26 +19,25 @@ export const Job = ({job}) => {
   useEffect(() => {
     switch (job.status) {
       case 'Potential':
-        setColor('lightgreen')
+        setStatusColor('lightgreen')
         break;
       case 'Applied':
-        setColor('orange')
+        setStatusColor('orange')
         break;
       case 'Phone Screen':
-        setColor('green')
+        setStatusColor('green')
         break;
       case 'Rejected':
-        setColor('red')
+        setStatusColor('red')
         break;
       default:
-      setColor('white')
-
+        setStatusColor('white')
     }
   })
 
 
-  const createUpdate = () => {
-    let newUpdate = {
+  const addUpdate = () => {
+    let update = {
       id: uuidv4(),
       statusUpdate,
       updateDate,
@@ -48,28 +46,24 @@ export const Job = ({job}) => {
     let editedJob = {
       ...job,
       status: statusUpdate,
-      updates:[newUpdate, ...job.updates]
+      updates:[update, ...job.updates]
     }
-
-    axios.patch('http://localhost:3001/jobs/' + job.id, editedJob).then(res => console.log(res.data))
-
+    axios.patch('http://localhost:3001/jobs/' + job.id, editedJob).then(res => console.log(res.data)) // Add update to job
   }
+
 
   const deleteUpdate = (id) => {
-    console.log(id);
-    let updatedUpdates = job.updates.filter(update => update.id !== id )
+    let newUpdates = job.updates.filter(update => update.id !== id )
     let editedJob = {
       ...job,
-      updates:[...updatedUpdates]
+      updates:[...newUpdates]
     }
-    axios.put('http://localhost:3001/jobs/' + job.id, editedJob).then(res => console.log(res.data))
-
+    axios.put('http://localhost:3001/jobs/' + job.id, editedJob).then(res => console.log(res.data)) // Remove update from job
   }
 
-  const deleteJob = (job) => {
-    console.log(job);
-    axios.delete('http://localhost:3001/jobs/' + job.id).then(res => console.log(res.data))
 
+  const deleteJob = (job) => {
+    axios.delete('http://localhost:3001/jobs/' + job.id).then(res => console.log(res.data)) // Delete entire job
   }
 
 
@@ -77,14 +71,14 @@ export const Job = ({job}) => {
 
   return (
     <>
-      <tr scope='row' className={jobOpened ? 'job': null}>
-        <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline style={{cursor:'pointer'}} /> : <IoChevronUpOutline style={{cursor:'pointer'}} />}</td>
+      <tr scope='row' className={jobOpened ? 'job' : null}>
+        <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline style={{cursor:'pointer'}} /> : <IoChevronUpOutline style={{cursor:'pointer', fontWeight:'bold'}} />}</td>
         <td className={jobOpened ? 'bold' : null}>{job.company}</td>
         <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
-        <td style={{color}} className={jobOpened ? 'bold' : null}>{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
+        <td style={{color:statusColor}} className={jobOpened ? 'bold' : null}>{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
-        {!jobOpened && <td onClick={() => deleteJob(job)}><IoTrashSharp/></td>}
+        {!jobOpened ? <td><IoPencilSharp style={{cursor:'pointer'}}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
       </tr>
       { jobOpened &&
         <>
@@ -97,7 +91,7 @@ export const Job = ({job}) => {
               <td>{update.statusUpdate}</td>
               <td>{update.updateDate}</td>
               <td>{update.updateNotes}</td>
-              <td onClick={() => deleteUpdate(update.id)}><IoTrashSharp/></td>
+              <td><IoPencilSharp style={{cursor:'pointer'}}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteUpdate(update.id)}/></td>
             </tr>
           )).filter((update, i) => i !== 0)
         }
@@ -123,7 +117,7 @@ export const Job = ({job}) => {
             <td>
               <input type='text' className="form-control" value={updateNotes} onChange={(e) => setUpdateNotes(e.target.value)}/>
             </td>
-            <td><button type='button' className='btn btn-primary sm' onClick={() => createUpdate()}><IoAddCircleSharp style={{fontSize:'1.5rem'}} /></button></td>
+            <td><button type='button' className='btn btn-primary sm' onClick={() => addUpdate()}><IoAddCircleSharp style={{fontSize:'1.5rem'}} /></button></td>
           </tr>
           <tr className={jobOpened ? 'job': null}>
             <td></td>
@@ -132,6 +126,7 @@ export const Job = ({job}) => {
             <td><strong>Location(s):</strong> {job.location}</td>
             <td><strong>Category:</strong> {job.category}</td>
             <td><strong>Connection(s):</strong> {job.connections}</td>
+            <td></td>
           </tr>
         </>
       }

@@ -3,52 +3,52 @@ import AppReducer from './AppReducer.js';
 
 // Set up initialState with (hardcoded data)
 const initialState = {
-  jobs: [
-    {
-      id: "1",
-      status: 'Applied',
-      company:'This Company',
-      jobTitle:"G",
-      updates: [
-        {
-          statusUpdate:'Saved',
-          updateDate: '2/9',
-          updateNotes: 'Something'
-        }
-      ]
-    },
-    {
-      id:"2",
-      status: 'Phone',
-      company:'That Company',
-      jobTitle:"M",
-      updates: [
-        {
-          statusUpdate:'Applied',
-          updateDate: '2/10',
-          updateNotes: 'Some more notes'
-        },
-        {
-          statusUpdate:'Saved',
-          updateDate: '2/9',
-          updateNotes: 'Some notes'
-        }
-      ]
-    },
-    {
-      id:"3",
-      status: 'Rejected',
-      company:'A Company',
-      jobTitle:"K",
-      updates: [
-        {
-          statusUpdate:'Saved',
-          updateDate: '2/10',
-          updateNotes: 'Some more notes'
-        }
-      ]
-    }
-  ],
+  // jobs: [
+  //   {
+  //     id: "1",
+  //     status: 'Applied',
+  //     company:'This Company',
+  //     jobTitle:"G",
+  //     updates: [
+  //       {
+  //         statusUpdate:'Saved',
+  //         updateDate: '2/9',
+  //         updateNotes: 'Something'
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     id:"2",
+  //     status: 'Phone',
+  //     company:'That Company',
+  //     jobTitle:"M",
+  //     updates: [
+  //       {
+  //         statusUpdate:'Applied',
+  //         updateDate: '2/10',
+  //         updateNotes: 'Some more notes'
+  //       },
+  //       {
+  //         statusUpdate:'Saved',
+  //         updateDate: '2/9',
+  //         updateNotes: 'Some notes'
+  //       }
+  //     ]
+  //   },
+  //   {
+  //     id:"3",
+  //     status: 'Rejected',
+  //     company:'A Company',
+  //     jobTitle:"K",
+  //     updates: [
+  //       {
+  //         statusUpdate:'Saved',
+  //         updateDate: '2/10',
+  //         updateNotes: 'Some more notes'
+  //       }
+  //     ]
+  //   }
+  // ],
   today: `${new Date().getMonth() + 1}/${new Date().getDate()}`
 }
 
