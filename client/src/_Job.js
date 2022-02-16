@@ -16,6 +16,10 @@ export const Job = ({job}) => {
   const [updateDate, setUpdateDate] = useState(today)
   const [updateNotes, setUpdateNotes] = useState('')
 
+  const [editing, setEditing] = useState(false)
+  const [editedSection, setEditedSection] = useState('')
+  const [editedValue, setEditedValue] = useState('')
+
   useEffect(() => {
     switch (job.status) {
       case 'Potential':
@@ -66,6 +70,63 @@ export const Job = ({job}) => {
     axios.delete('http://localhost:3001/jobs/' + job.id).then(res => console.log(res.data)) // Delete entire job
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    let editedJob = {}
+    switch (editedSection) {
+      case 'company':
+        editedJob = {
+          ...job,
+          company:editedValue
+        }
+        console.log(editedJob);
+        break;
+      case 'job title':
+        editedJob = {
+          ...job,
+          jobTitle:editedValue
+        }
+        console.log(editedJob);
+        break;
+      case 'job board':
+        editedJob = {
+          ...job,
+          jobBoard:editedValue
+        }
+        console.log(editedJob);
+        break;
+      case 'resume':
+        editedJob = {
+          ...job,
+          resume:editedValue
+        }
+        console.log(editedJob);
+        break;
+      case 'locations':
+        editedJob = {
+          ...job,
+          location:editedValue
+        }
+        console.log(editedJob);
+        break;
+      case 'category':
+        editedJob = {
+          ...job,
+          category:editedValue
+        }
+        console.log(editedJob);
+        break;
+      case 'connections':
+        editedJob = {
+          ...job,
+          connections:editedValue
+        }
+        console.log(editedJob);
+        break;
+    }
+    setEditing(!editing)
+  }
+
 
 
 
@@ -73,8 +134,20 @@ export const Job = ({job}) => {
     <>
       <tr scope='row' className={jobOpened ? 'job' : null}>
         <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline style={{cursor:'pointer'}} /> : <IoChevronUpOutline style={{cursor:'pointer', fontWeight:'bold'}} />}</td>
-        <td className={jobOpened ? 'bold' : null}>{job.company}</td>
-        <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
+        {
+          editing && editedSection == 'company' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td className={jobOpened ? 'bold' : null} onClick={() => {
+            setEditing(!editing)
+            setEditedSection('company')
+            setEditedValue(job.company)
+          }}>{job.company}</td>
+        }
+        {
+          editing && editedSection == 'job title' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td className={jobOpened ? 'bold' : null} onClick={() => {
+            setEditing(!editing)
+            setEditedSection('job title')
+            setEditedValue(job.jobTitle)
+          }}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
+        }
         <td style={{color:statusColor}} className={jobOpened ? 'bold' : null}>{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
@@ -121,11 +194,41 @@ export const Job = ({job}) => {
           </tr>
           <tr className={jobOpened ? 'job': null}>
             <td></td>
-            <td><strong>Job Board:</strong> {job.jobBoard}</td>
-            <td><strong>Resume:</strong> {job.resume}</td>
-            <td><strong>Location(s):</strong> {job.location}</td>
-            <td><strong>Category:</strong> {job.category}</td>
-            <td><strong>Connection(s):</strong> {job.connections}</td>
+            {
+              editing && editedSection == 'job board' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td onClick={() => {
+                setEditing(!editing)
+                setEditedSection('job board')
+                setEditedValue(job.jobBoard)
+              }}><strong>Job Board:</strong> {job.jobBoard}</td>
+            }
+            {
+              editing && editedSection == 'resume' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td onClick={() => {
+                setEditing(!editing)
+                setEditedSection('resume')
+                setEditedValue(job.resume)
+              }}><strong>Resume:</strong> {job.resume}</td>
+            }
+            {
+              editing && editedSection == 'locations' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td onClick={() => {
+                setEditing(!editing)
+                setEditedSection('locations')
+                setEditedValue(job.location)
+              }}><strong>Location(s):</strong> {job.location}</td>
+            }
+            {
+              editing && editedSection == 'category' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td onClick={() => {
+                setEditing(!editing)
+                setEditedSection('category')
+                setEditedValue(job.category)
+              }}><strong>Category:</strong> {job.category}</td>
+            }
+            {
+              editing && editedSection == 'connections' ? <td><form onSubmit={handleSubmit}><input type='text' value={editedValue} onChange={(e) => setEditedValue(e.target.value)} /></form></td> : <td onClick={() => {
+                setEditing(!editing)
+                setEditedSection('connections')
+                setEditedValue(job.connections)
+              }}><strong>Connection(s):</strong> {job.connections}</td>
+            }
             <td></td>
           </tr>
         </>
