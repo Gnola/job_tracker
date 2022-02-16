@@ -6,6 +6,8 @@ export const JobList = ({ jobs }) => {
 
   const [clicked, setClicked] = useState('all') // Controls Filtered Jobs
   const [filteredJobs, setFilteredJobs] = useState(jobs)
+  const [sortedJobs, setSortedJobs] = useState([])
+  const [sorted, setSorted] = useState(false)
 
   // Filter jobs on button click
   const handleClick = (text) => {
@@ -31,6 +33,43 @@ export const JobList = ({ jobs }) => {
     }
   }
 
+  const handleSort = (text) => {
+    console.log(text);
+    if (filteredJobs.length > 0) {
+      switch (text) {
+        case 'company':
+          setSorted(!sorted)
+          !sorted ? setSortedJobs(filteredJobs.sort((a, b) => a.company > b.company ? 1 : -1)) : setSortedJobs(filteredJobs.sort((a, b) => a.company < b.company ? 1 : -1))
+          break;
+        case 'status':
+          setSorted(!sorted)
+          !sorted ? setSortedJobs(filteredJobs.sort((a, b) => a.status > b.status ? 1 : -1)) : setSortedJobs(filteredJobs.sort((a, b) => a.status < b.status ? 1 : -1))
+          break;
+        case 'updateDate':
+          setSorted(!sorted)
+          !sorted ? setSortedJobs(filteredJobs.sort((a, b) => a.updates[0].updateDate > b.updates[0].updateDate ? 1 : -1)) : setSortedJobs(filteredJobs.sort((a, b) => a.updates[0].updateDate < b.updates[0].updateDate ? 1 : -1))
+          break;
+        default:
+      }
+    } else {
+      switch (text) {
+        case 'company':
+          setSorted(!sorted)
+          !sorted ? setSortedJobs(jobs.sort((a, b) => a.company > b.company ? 1 : -1)) : setSortedJobs(jobs.sort((a, b) => a.company < b.company ? 1 : -1))
+          break;
+        case 'status':
+          setSorted(!sorted)
+          !sorted ? setSortedJobs(jobs.sort((a, b) => a.status > b.status ? 1 : -1)) : setSortedJobs(jobs.sort((a, b) => a.status < b.status ? 1 : -1))
+          break;
+        case 'updateDate':
+          setSorted(!sorted)
+          !sorted ? setSortedJobs(jobs.sort((a, b) => a.updates[0].updateDate > b.updates[0].updateDate ? 1 : -1)) : setSortedJobs(jobs.sort((a, b) => a.updates[0].updateDate < b.updates[0].updateDate ? 1 : -1))
+          break;
+        default:
+      }
+    }
+  }
+
   return (
     <>
       <button type='button' className={clicked === 'all' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleClick('all')}>All</button>
@@ -45,10 +84,10 @@ export const JobList = ({ jobs }) => {
         <thead>
           <tr>
             <th scope='col'></th>
-            <th scope='col'>Company</th>
+            <th scope='col' onClick={() => handleSort('company')}>Company</th>
             <th scope='col'>Job Title</th>
-            <th scope='col'>Status</th>
-            <th scope='col'>Last Updated</th>
+            <th scope='col' onClick={() => handleSort('status')}>Status</th>
+            <th scope='col' onClick={() => handleSort('updateDate')}>Last Updated</th>
             <th scope='col'>Latest Update</th>
           </tr>
         </thead>
