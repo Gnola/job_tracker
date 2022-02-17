@@ -22,7 +22,7 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
         break;
       case 'active':
         setClicked('active')
-        setFilteredJobs(jobs.filter(job => job.status !== 'Rejected'))
+        setFilteredJobs(jobs.filter(job => job.status !== 'Rejected' && job.status !== 'Potential'))
         break;
       case 'done':
         setClicked('done')

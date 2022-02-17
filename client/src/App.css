@@ -1,16 +1,11 @@
 .hide {
   display: none;
 }
-.green {
-  background: 'green'
-}
-.orange {
-  background: 'orange'
-}
+
 .bold {
   font-weight: bold;
 }
 
 .job {
-  background: lightgrey;
+  background: rgba(14, 110, 253, .5);
 }

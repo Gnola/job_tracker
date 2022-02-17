@@ -63,7 +63,7 @@ import axios from 'axios';
      console.log(editedJob);
 
      axios.put('http://localhost:3001/jobs/' + editedJob.id, editedJob).then(res => console.log(res.data))
-     
+
      this.setState({
        editing:!this.state.editing
      })

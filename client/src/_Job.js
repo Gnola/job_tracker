@@ -11,8 +11,6 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
   const [statusColor, setStatusColor] = useState('') // Sets status color
 
   const [editing, setEditing] = useState(false)
-  const [editedSection, setEditedSection] = useState('')
-  const [editedValue, setEditedValue] = useState('')
 
   useEffect(() => {
     // Apply conditional coloring for status'
@@ -26,11 +24,20 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
       case 'Phone Screen':
         setStatusColor('green')
         break;
+      case 'Technical Interview':
+        setStatusColor('green')
+        break;
+      case 'Behavioral Interview':
+        setStatusColor('green')
+        break;
+      case 'Never Heard Back':
+        setStatusColor('#ba1e4a')
+        break;
       case 'Rejected':
         setStatusColor('red')
         break;
       default:
-        setStatusColor('white')
+        setStatusColor('black')
     }
   })
 
@@ -48,17 +55,21 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
         <td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
-        {!jobOpened ? <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => {
-          setEditingJob(!editingJob)
-          setJobToEdit(job)
-        }}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
+        { !jobOpened ?
+          <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => {
+              setEditingJob(!editingJob)
+              setJobToEdit(job)
+            }}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/>
+          </td>
+          :
+          <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => {setEditing(!editing)}}/></td>}
       </tr>
       { jobOpened &&
         <>
           { job.updates.length > 1 &&
             job.updates.map((update, i) => (
               <JobUpdate key={i} job={job} update={update}  />
-            )).filter((update, i) => i !== 0)
+            ))
           }
           <AddJobUpdate job={job} />
           <tr className={jobOpened ? 'job': null}>
