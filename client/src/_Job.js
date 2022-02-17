@@ -6,12 +6,10 @@ import axios from 'axios';
 import { JobUpdate } from './_JobUpdate.js'
 import { AddJobUpdate } from './_AddJobUpdate.js'
 
-import { GlobalContext } from './context/GlobalState.js'
 
 
-export const Job = ({job, setJobToEdit, editingJob, setEditingJob}) => {
+export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
 
-  const { today } = useContext(GlobalContext); // From GlobalState
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
   const [statusColor, setStatusColor] = useState('') // Sets status color
 

@@ -2,21 +2,14 @@ import React, { useState, useContext } from 'react'
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 
-import { GlobalContext } from './context/GlobalState.js'
-
 export const AddJobForm = () => {
-  const { addJob, today } = useContext(GlobalContext);
 
-  console.log(today);
-
-  const [id, setId] = useState('') // only used for key
-
-  const [date, setDate] = useState(today)
+  const [id, setId] = useState('')
+  const [status, setStatus] = useState('Potential')
+  const [date, setDate] = useState('')
   const [company, setCompany] = useState('')
   const [jobTitle, setJobTitle] = useState('')
   const [link, setLink] = useState('')
-  const [status, setStatus] = useState('Potential')
-
   const [jobBoard, setJobBoard] = useState('')
   const [resume, setResume] = useState('')
   const [location, setLocation] = useState('')
@@ -89,7 +82,7 @@ export const AddJobForm = () => {
     </div>
     <div className='form-group'>
       <label htmlFor="date">Date</label>
-      <input type='text' className="form-control" id='date' value={date} onChange={(e) => setDate(e.target.value)} />
+      <input type='text' className="form-control" id='date' minLength="4" maxLength="5" value={date} onChange={(e) => setDate(e.target.value)} />
     </div>
       <div className='form-group'>
         <label htmlFor="company">Company Name</label>
