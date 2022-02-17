@@ -6,7 +6,7 @@
       "company": "Vector",
       "jobTitle": "Solutions Engineer",
       "link": "https://www.withvector.com/company/careers?gh_jid=4019568004",
-      "status": "Rejected",
+      "status": "Phone Screen",
       "jobBoard": "",
       "resume": "Gianni_Nola_Resume_2022",
       "location": "Remote",
@@ -14,6 +14,12 @@
       "connections": "Kenny",
       "notes": "",
       "updates": [
+        {
+          "id": "73d7c0b7-e53f-47cc-9659-c89673166b63",
+          "statusUpdate": "Phone Screen",
+          "updateDate": "2/22",
+          "updateNotes": "Talking with Darren"
+        },
         {
           "id": "b54b1407-de3c-4e82-b72f-07f2a3e90c99",
           "statusUpdate": "Rejected",
