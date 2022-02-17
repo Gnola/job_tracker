@@ -1,5 +1,8 @@
 import React, { Component } from 'react'
 import axios from 'axios';
+import { IoCloseSharp } from "react-icons/io5";
+
+
 
 class EditJobForm extends React.Component {
   state = {
@@ -17,7 +20,7 @@ class EditJobForm extends React.Component {
 
   handleChange = (e) => {
     this.setState({
-      [e.target.name]: e.target.value
+      [e.target.id]: e.target.value
     })
   }
 
@@ -39,20 +42,18 @@ class EditJobForm extends React.Component {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title">Edit Job</h5>
-              <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" onClick={() => this.props.setEditingJob(!this.props.editingJob)}>&times;</span>
-              </button>
+              <IoCloseSharp style={{cursor:'pointer'}} onClick={() => this.props.setEditingJob(!this.props.editingJob)}/>
             </div>
             <div className="modal-body">
               <form onSubmit={this.handleSubmit}>
-                <input type='text' name='company' onChange={this.handleChange} value={this.state.company} placeholder='Company'/>
-                <input type='text' name='jobTitle' onChange={this.handleChange} value={this.state.jobTitle} placeholder='Job Title'/>
-                <input type='text' name='link' onChange={this.handleChange} value={this.state.link} placeholder='Link'/>
-                <input type='text' name='jobBoard' onChange={this.handleChange} value={this.state.jobBoard} placeholder='Job Board'/>
-                <input type='text' name='resume' onChange={this.handleChange} value={this.state.resume} placeholder='Resume'/>
-                <input type='text' name='location' onChange={this.handleChange} value={this.state.location} placeholder='Location(s)'/>
-                <input type='text' name='category' onChange={this.handleChange} value={this.state.category} placeholder='Category'/>
-                <input type='text' name='connections' onChange={this.handleChange} value={this.state.connections} placeholder='Connection(s)'/>
+                <input type='text' id='company' onChange={this.handleChange} value={this.state.company} placeholder='Company'/>
+                <input type='text' id='jobTitle' onChange={this.handleChange} value={this.state.jobTitle} placeholder='Job Title'/>
+                <input type='text' id='link' onChange={this.handleChange} value={this.state.link} placeholder='Link'/>
+                <input type='text' id='jobBoard' onChange={this.handleChange} value={this.state.jobBoard} placeholder='Job Board'/>
+                <input type='text' id='resume' onChange={this.handleChange} value={this.state.resume} placeholder='Resume'/>
+                <input type='text' id='location' onChange={this.handleChange} value={this.state.location} placeholder='Location(s)'/>
+                <input type='text' id='category' onChange={this.handleChange} value={this.state.category} placeholder='Category'/>
+                <input type='text' id='connections' onChange={this.handleChange} value={this.state.connections} placeholder='Connection(s)'/>
                 <div className="modal-footer">
                   <button type="submit" className="btn btn-primary">Save changes</button>
                 </div>

@@ -813,6 +813,28 @@
           "updateNotes": "-"
         }
       ]
+    },
+    {
+      "id": "0a8680b9-7da3-4e24-9d79-c69f43de14bc",
+      "status": "Potential",
+      "date": "2/16",
+      "company": "Another test",
+      "jobTitle": "",
+      "link": "",
+      "jobBoard": "",
+      "resume": "",
+      "location": "",
+      "category": "",
+      "connections": "",
+      "notes": "",
+      "updates": [
+        {
+          "id": "458b6052-8531-4d4b-b721-0ea7a85d558e",
+          "statusUpdate": "Potential",
+          "updateDate": "2/16",
+          "updateNotes": ""
+        }
+      ]
     }
   ]
 }

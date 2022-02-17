@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
-
 import axios from 'axios';
 
-import { AddJobForm } from './_AddJobForm.js';
+import AddJobForm  from './_AddJobForm.js';
 import EditJobForm from './_EditJobForm.js'
+
 import { JobList } from './_JobList.js';
 
 
@@ -16,8 +16,7 @@ function App() {
 
 
   useEffect(() => {
-    // Set State Initially
-    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data]))
+    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data])) // Set State Initially
   }, [])
 
   return (
