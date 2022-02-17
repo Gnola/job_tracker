@@ -83,10 +83,10 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
         <thead>
           <tr>
             <th scope='col'></th>
-            <th scope='col' onClick={() => handleSort('company')}>Company</th>
+            <th scope='col' onClick={() => handleSort('company')} style={{cursor:'pointer'}}>Company</th>
             <th scope='col'>Job Title</th>
-            <th scope='col' onClick={() => handleSort('status')}>Status</th>
-            <th scope='col' onClick={() => handleSort('updateDate')}>Last Updated</th>
+            <th scope='col' onClick={() => handleSort('status')} style={{cursor:'pointer'}}>Status</th>
+            <th scope='col' onClick={() => handleSort('updateDate')} style={{cursor:'pointer'}}>Last Updated</th>
             <th scope='col'>Latest Update</th>
           </tr>
         </thead>

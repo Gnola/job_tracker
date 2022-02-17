@@ -36,6 +36,7 @@ class EditJobForm extends React.Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="modal" tabIndex="-1" role="dialog" style={{display:'block'}}>
         <div className="modal-dialog" role="document">

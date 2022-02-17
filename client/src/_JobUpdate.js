@@ -2,9 +2,9 @@ import React, {  } from 'react';
 import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
 import axios from 'axios';
 
-export const JobUpdate = ({job, update, jobOpened}) => {
+export const JobUpdate = ({job, update}) => {
 
-  // Remove update from job
+  // Delete update from job
   const deleteUpdate = (id) => {
     let newUpdates = job.updates.filter(update => update.id !== id )
     let editedJob = {
@@ -15,7 +15,7 @@ export const JobUpdate = ({job, update, jobOpened}) => {
   }
 
   return (
-    <tr className={jobOpened ? 'job': null}>
+    <tr className='job'>
       <td></td>
       <td></td>
       <td></td>

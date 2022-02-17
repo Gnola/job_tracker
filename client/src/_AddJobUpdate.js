@@ -3,9 +3,9 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { IoAddCircleSharp } from "react-icons/io5";
 
-export const AddJobUpdate = ({job, jobOpened}) => {
+export const AddJobUpdate = ({ job }) => {
 
-  const [statusUpdate, setStatusUpdate] = useState(job.updates.length >= 1 ? job.updates[0].statusUpdate: job.status)
+  const [statusUpdate, setStatusUpdate] = useState(job.updates.length >= 1 ? job.updates[0].statusUpdate : job.status)
   const [updateDate, setUpdateDate] = useState('')
   const [updateNotes, setUpdateNotes] = useState('')
 
@@ -26,7 +26,7 @@ export const AddJobUpdate = ({job, jobOpened}) => {
   }
 
   return (
-    <tr className={jobOpened ? 'job': null}>
+    <tr className='job'>
       <td></td>
       <td></td>
       <td></td>
