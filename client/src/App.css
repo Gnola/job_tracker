@@ -1,17 +1,5 @@
-.sorting-btns {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  /* border: 1px solid red; */
-  width: 40%;
-  margin: 2vh auto;
-}
-
-.sorting-btns > button:hover {
-  border: 1px solid rgb(14, 110, 253);
-  background: rgb(14, 110, 253);
-  color: white;
-
+h2 {
+  text-align: center;
 }
 
 .hide {
@@ -26,9 +14,45 @@
   background: rgb(245,245,245);
 }
 
+.sorting-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  width: 40%;
+  margin: 2vh auto;
+}
+
+  .sorting-btns > button:hover {
+    border: 1px solid rgb(14, 110, 253);
+    background: rgb(14, 110, 253);
+    color: white;
+  }
+
 .icon {
   cursor: pointer;
 }
-.icon:hover {
-  color: rgb(14, 110, 253);
+  .icon:hover {
+    color: rgb(14, 110, 253);
+  }
+
+#addjobform {
+  width: 80%;
+  margin: 1vh auto;
 }
+  #addjobform > button {
+    display: flex;
+    margin: 1.5vh auto;
+  }
+
+#editjobform {
+  display: flex;
+  flex-direction: column;
+}
+  .modal-footer > button {
+    display: flex;
+    margin: 0 auto;
+  }
+  .modal-title {
+    margin: 0 auto;
+  }

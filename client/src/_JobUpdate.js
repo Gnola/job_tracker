@@ -81,7 +81,7 @@ import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
          { this.state.editing ?
            <td>
               <form onSubmit={this.handlleSubmit}>
-                <select id='statusUpdate' className="custom-select" value={this.state.statusUpdate} onChange={this.handleChange}>
+                <select id='statusUpdate' className="form-select" value={this.state.statusUpdate} onChange={this.handleChange}>
                   <option value="Potential">Potential</option>
                   <option value="Applied">Applied</option>
                   <option value="Phone Screen">Phone Screen</option>
@@ -97,12 +97,12 @@ import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
            <td>{this.state.update.statusUpdate}</td>
          }
          { this.state.editing ?
-           <td><form onSubmit={this.handlleSubmit}><input type='text' id='updateDate' value={this.state.updateDate} onChange={this.handleChange} /></form></td>
+           <td><form onSubmit={this.handlleSubmit}><input type='text' className="form-control" id='updateDate' value={this.state.updateDate} onChange={this.handleChange} /></form></td>
            :
            <td>{this.state.update.updateDate}</td>
          }
          { this.state.editing ?
-           <td><form onSubmit={this.handlleSubmit}><input type='text' id='updateNotes' value={this.state.updateNotes} onChange={this.handleChange} /></form></td>
+           <td><form onSubmit={this.handlleSubmit}><input type='text' className="form-control" id='updateNotes' value={this.state.updateNotes} onChange={this.handleChange} /></form></td>
            :
            <td>{this.state.update.updateNotes}</td>
          }

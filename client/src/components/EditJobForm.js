@@ -46,7 +46,7 @@ class EditJobForm extends React.Component {
               <IoCloseSharp className='icon' onClick={() => this.props.setEditingJob(!this.props.editingJob)}/>
             </div>
             <div className="modal-body">
-              <form onSubmit={this.handleSubmit}>
+              <form id='editjobform' onSubmit={this.handleSubmit}>
                 <input type='text' id='company' onChange={this.handleChange} value={this.state.company} placeholder='Company'/>
                 <input type='text' id='jobTitle' onChange={this.handleChange} value={this.state.jobTitle} placeholder='Job Title'/>
                 <input type='text' id='link' onChange={this.handleChange} value={this.state.link} placeholder='Link'/>

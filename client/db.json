@@ -791,58 +791,6 @@
           "updateNotes": "Talked with Nettie - Waiting to hear back"
         }
       ]
-    },
-    {
-      "id": "b6aa2ac8-7cab-4553-a12e-e233c184ad56",
-      "status": "Offer",
-      "date": "2/16",
-      "company": "TEst",
-      "jobTitle": "",
-      "link": "",
-      "jobBoard": "",
-      "resume": "",
-      "location": "",
-      "category": "",
-      "connections": "",
-      "notes": "",
-      "updates": [
-        {
-          "id": "91ae45a8-71f5-4e19-9c48-c276c5ab45ab",
-          "statusUpdate": "Offer",
-          "updateDate": "",
-          "updateNotes": "-"
-        },
-        {
-          "id": "03295944-2a1e-4e22-9b23-6661dc1a7fe0",
-          "statusUpdate": "Never Heard Back",
-          "updateDate": "",
-          "updateNotes": "-"
-        },
-        {
-          "id": "42ed9200-d299-4441-a8d7-2199d76c7568",
-          "statusUpdate": "Technical Interview",
-          "updateDate": "",
-          "updateNotes": "-"
-        },
-        {
-          "id": "beb0eb9f-6009-446f-82c5-56f078c7bdfc",
-          "statusUpdate": "Rejected",
-          "updateDate": "2/17",
-          "updateNotes": "-"
-        },
-        {
-          "id": "f30760f0-a357-4b93-a3fa-ecb58e1d30b1",
-          "statusUpdate": "Behavioral Interview",
-          "updateDate": "2/16",
-          "updateNotes": "-"
-        },
-        {
-          "id": "9c021a2e-4ff4-4470-aae8-41bee0bc25de",
-          "statusUpdate": "Potential",
-          "updateDate": "2/11",
-          "updateNotes": "-"
-        }
-      ]
     }
   ]
 }

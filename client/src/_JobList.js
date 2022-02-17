@@ -76,11 +76,9 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
         <button type='button' className={clicked === 'active' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('active')}>Active</button>
         <button type='button' className={clicked === 'done' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('done')}>Done</button>
       </div>
-      <span style={{textAlign:'center', marginTop: '50px'}}>
       {
         clicked === 'all' ? <h2>All</h2> : clicked === 'potential' ? <h2>Potential</h2> : clicked === 'active' ? <h2>Active</h2> : clicked === 'done' ? <h2>Done</h2> : null
       }
-      </span>
       <table className='table'>
         {/* Row of Headers */}
         <thead>
