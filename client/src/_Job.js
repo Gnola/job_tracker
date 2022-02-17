@@ -2,7 +2,7 @@ import React, { useState, useContext, useEffect } from 'react';
 import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
 import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
-import { JobUpdate } from './_JobUpdate.js'
+import JobUpdate  from './_JobUpdate.js'
 import { AddJobUpdate } from './_AddJobUpdate.js'
 
 export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
@@ -48,10 +48,10 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
         <td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
-        {!jobOpened ? <td onClick={() => {
+        {!jobOpened ? <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => {
           setEditingJob(!editingJob)
           setJobToEdit(job)
-        }}><IoPencilSharp style={{cursor:'pointer'}}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
+        }}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
       </tr>
       { jobOpened &&
         <>

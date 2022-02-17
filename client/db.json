@@ -793,32 +793,10 @@
       ]
     },
     {
-      "id": "56d77567-0403-40a1-9594-a7f208e5be04",
+      "id": "b6aa2ac8-7cab-4553-a12e-e233c184ad56",
+      "status": "Rejected",
       "date": "2/16",
-      "company": "Testing",
-      "jobTitle": "Title",
-      "link": "",
-      "status": "Potential",
-      "jobBoard": "",
-      "resume": "",
-      "location": "",
-      "category": "",
-      "connections": "",
-      "notes": "",
-      "updates": [
-        {
-          "id": "053961c9-2ce5-4cf7-8ac9-195ec2b032f4",
-          "statusUpdate": "Potential",
-          "updateDate": "2/16",
-          "updateNotes": "-"
-        }
-      ]
-    },
-    {
-      "id": "0a8680b9-7da3-4e24-9d79-c69f43de14bc",
-      "status": "Potential",
-      "date": "2/16",
-      "company": "Another test",
+      "company": "TEst",
       "jobTitle": "",
       "link": "",
       "jobBoard": "",
@@ -829,10 +807,22 @@
       "notes": "",
       "updates": [
         {
-          "id": "458b6052-8531-4d4b-b721-0ea7a85d558e",
-          "statusUpdate": "Potential",
+          "id": "beb0eb9f-6009-446f-82c5-56f078c7bdfc",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/18",
+          "updateNotes": "-"
+        },
+        {
+          "id": "f30760f0-a357-4b93-a3fa-ecb58e1d30b1",
+          "statusUpdate": "Behavioral Interview",
           "updateDate": "2/16",
-          "updateNotes": ""
+          "updateNotes": "-"
+        },
+        {
+          "id": "9c021a2e-4ff4-4470-aae8-41bee0bc25de",
+          "statusUpdate": "Potential",
+          "updateDate": "2/11",
+          "updateNotes": "-"
         }
       ]
     }
