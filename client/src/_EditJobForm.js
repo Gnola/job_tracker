@@ -27,7 +27,7 @@ class EditJobForm extends React.Component {
       ...this.state
     }
     console.log(editedJob);
-    this.props.setEditJob(!this.props.editJob)
+    this.props.setEditingJob(!this.props.editingJob)
 
     axios.patch('http://localhost:3001/jobs/' + this.state.id, editedJob).then(res => console.log(res.data))
   }
@@ -40,7 +40,7 @@ class EditJobForm extends React.Component {
             <div className="modal-header">
               <h5 className="modal-title">Edit Job</h5>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true" onClick={() => this.props.setEditJob(!this.props.editJob)}>&times;</span>
+                <span aria-hidden="true" onClick={() => this.props.setEditingJob(!this.props.editingJob)}>&times;</span>
               </button>
             </div>
             <div className="modal-body">

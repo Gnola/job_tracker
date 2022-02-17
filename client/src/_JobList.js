@@ -1,18 +1,16 @@
 import React, { useState, useContext } from 'react';
-// import './App.css';
 import { Job } from './_Job.js'
-import EditJobForm from './_EditJobForm.js'
 
-
-export const JobList = ({ jobs, setJobToEdit, setEditJob, editJob }) => {
+export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
 
   const [clicked, setClicked] = useState('all') // Controls Filtered Jobs
   const [filteredJobs, setFilteredJobs] = useState(jobs)
-  const [sortedJobs, setSortedJobs] = useState([])
-  const [sorted, setSorted] = useState(false)
 
-  // Filter jobs on button click
-  const handleClick = (text) => {
+  const [sorted, setSorted] = useState(false)
+  const [sortedJobs, setSortedJobs] = useState([])
+
+  // Filter jobs
+  const handleFilter = (text) => {
     switch (text) {
       case 'all':
         setClicked('all')
@@ -35,8 +33,8 @@ export const JobList = ({ jobs, setJobToEdit, setEditJob, editJob }) => {
     }
   }
 
+  // Sort jobs
   const handleSort = (text) => {
-    console.log(text);
     if (filteredJobs.length > 0) {
       switch (text) {
         case 'company':
@@ -51,7 +49,6 @@ export const JobList = ({ jobs, setJobToEdit, setEditJob, editJob }) => {
           setSorted(!sorted)
           !sorted ? setSortedJobs(filteredJobs.sort((a, b) => a.updates[0].updateDate > b.updates[0].updateDate ? 1 : -1)) : setSortedJobs(filteredJobs.sort((a, b) => a.updates[0].updateDate < b.updates[0].updateDate ? 1 : -1))
           break;
-        default:
       }
     } else {
       switch (text) {
@@ -67,22 +64,22 @@ export const JobList = ({ jobs, setJobToEdit, setEditJob, editJob }) => {
           setSorted(!sorted)
           !sorted ? setSortedJobs(jobs.sort((a, b) => a.updates[0].updateDate > b.updates[0].updateDate ? 1 : -1)) : setSortedJobs(jobs.sort((a, b) => a.updates[0].updateDate < b.updates[0].updateDate ? 1 : -1))
           break;
-        default:
       }
     }
   }
 
   return (
     <>
-      <button type='button' className={clicked === 'all' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleClick('all')}>All</button>
-      <button type='button' className={clicked === 'potential' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleClick('potential')}>Potential</button>
-      <button type='button' className={clicked === 'active' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleClick('active')}>Active</button>
-      <button type='button' className={clicked === 'done' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleClick('done')}>Done</button>
+      <button type='button' className={clicked === 'all' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('all')}>All</button>
+      <button type='button' className={clicked === 'potential' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('potential')}>Potential</button>
+      <button type='button' className={clicked === 'active' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('active')}>Active</button>
+      <button type='button' className={clicked === 'done' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('done')}>Done</button>
       {clicked === 'all' &&(<h1>All</h1>)}
       {clicked === 'potential' &&(<h1>Potential</h1>)}
       {clicked === 'active' &&(<h1>Active</h1>)}
       {clicked === 'done' &&(<h1>Done</h1>)}
       <table className='table'>
+        {/* Row of Headers */}
         <thead>
           <tr>
             <th scope='col'></th>
@@ -93,12 +90,13 @@ export const JobList = ({ jobs, setJobToEdit, setEditJob, editJob }) => {
             <th scope='col'>Latest Update</th>
           </tr>
         </thead>
+        {/* Rows of Jobs */}
         <tbody>
           {
             filteredJobs.length === 0 ?
-            jobs.map((job) => (<Job key={job.id} job={job} setJobToEdit={setJobToEdit} setEditJob={setEditJob} editJob={editJob}/>))
+            jobs.map((job) => (<Job key={job.id} job={job} setJobToEdit={setJobToEdit} setEditingJob={setEditingJob} editingJob={editingJob}/>))
             :
-            filteredJobs.map((job) => (<Job key={job.id} job={job} setJobToEdit={setJobToEdit} setEditJob={setEditJob} editJob={editJob}/>))
+            filteredJobs.map((job) => (<Job key={job.id} job={job} setJobToEdit={setJobToEdit} setEditingJob={setEditingJob} editingJob={editingJob}/>))
           }
         </tbody>
       </table>

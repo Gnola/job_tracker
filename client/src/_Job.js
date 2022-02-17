@@ -1,13 +1,15 @@
 import React, { useState, useContext, useEffect } from 'react';
-import axios from 'axios';
-import { v4 as uuidv4 } from 'uuid';
 import {IoChevronDownOutline, IoChevronUpOutline, IoAddCircleSharp, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
+import { v4 as uuidv4 } from 'uuid';
+import axios from 'axios';
 
-import { GlobalContext } from './context/GlobalState.js'
 import { JobUpdate } from './_JobUpdate.js'
 import { AddJobUpdate } from './_AddJobUpdate.js'
 
-export const Job = ({job, setJobToEdit, setEditJob, editJob}) => {
+import { GlobalContext } from './context/GlobalState.js'
+
+
+export const Job = ({job, setJobToEdit, editingJob, setEditingJob}) => {
 
   const { today } = useContext(GlobalContext); // From GlobalState
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
@@ -18,6 +20,7 @@ export const Job = ({job, setJobToEdit, setEditJob, editJob}) => {
   const [editedValue, setEditedValue] = useState('')
 
   useEffect(() => {
+    // Apply conditional coloring for status'
     switch (job.status) {
       case 'Potential':
         setStatusColor('lightgreen')
@@ -123,7 +126,7 @@ export const Job = ({job, setJobToEdit, setEditJob, editJob}) => {
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
         {!jobOpened ? <td onClick={() => {
-          setEditJob(!editJob)
+          setEditingJob(!editingJob)
           setJobToEdit(job)
         }}><IoPencilSharp style={{cursor:'pointer'}}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/></td> : <td></td>}
       </tr>
