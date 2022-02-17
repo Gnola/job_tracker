@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
 import { IoAddCircleSharp } from "react-icons/io5";
 
-export const AddJobUpdate = ({ job }) => {
+export const AddUpdate = ({ job }) => {
 
   const [statusUpdate, setStatusUpdate] = useState(job.updates.length >= 1 ? job.updates[0].statusUpdate : job.status)
   const [updateDate, setUpdateDate] = useState('')

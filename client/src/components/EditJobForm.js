@@ -43,7 +43,7 @@ class EditJobForm extends React.Component {
           <div className="modal-content">
             <div className="modal-header">
               <h5 className="modal-title">Edit Job</h5>
-              <IoCloseSharp style={{cursor:'pointer'}} onClick={() => this.props.setEditingJob(!this.props.editingJob)}/>
+              <IoCloseSharp className='icon' onClick={() => this.props.setEditingJob(!this.props.editingJob)}/>
             </div>
             <div className="modal-body">
               <form onSubmit={this.handleSubmit}>

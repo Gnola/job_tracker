@@ -4,7 +4,7 @@ import { v4 as uuidv4 } from 'uuid';
 import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
 
 import JobUpdate  from './_JobUpdate.js' // Page/Consistent View
-import { AddJobUpdate } from './components/AddJobUpdate.js' // Component
+import { AddUpdate } from './components/AddUpdate.js' // Component
 
 
 export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
@@ -49,17 +49,17 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
   return (
     <>
       <tr scope='row' className={jobOpened ? 'job' : null}>
-        <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline style={{cursor:'pointer'}} /> : <IoChevronUpOutline style={{cursor:'pointer'}} />}</td>
+        <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline className='icon' /> : <IoChevronUpOutline className='icon' />}</td>
         <td className={jobOpened ? 'bold' : null}>{job.company}</td>
         <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
         <td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
         <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
         { !jobOpened ?
-          <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => {
+          <td><IoPencilSharp className='icon' onClick={() => {
               setEditingJob(!editingJob)
               setJobToEdit(job)
-            }}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/>
+            }}/><IoTrashSharp className='icon' style={{marginLeft:'10px'}} onClick={() => deleteJob(job)}/>
           </td>
           :
           <td></td>}
@@ -71,7 +71,7 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
               <JobUpdate key={i} job={job} update={update}  />
             ))
           }
-          <AddJobUpdate job={job} />
+          <AddUpdate job={job} />
           <tr className={jobOpened ? 'job': null}>
             <td></td>
             <td><strong>Job Board:</strong> {job.jobBoard}</td>

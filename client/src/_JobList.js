@@ -70,14 +70,17 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
 
   return (
     <>
-      <button type='button' className={clicked === 'all' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('all')}>All</button>
-      <button type='button' className={clicked === 'potential' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('potential')}>Potential</button>
-      <button type='button' className={clicked === 'active' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('active')}>Active</button>
-      <button type='button' className={clicked === 'done' ? 'btn btn-primary' : '"btn btn-light"'} onClick={()=>handleFilter('done')}>Done</button>
-      {clicked === 'all' &&(<h1>All</h1>)}
-      {clicked === 'potential' &&(<h1>Potential</h1>)}
-      {clicked === 'active' &&(<h1>Active</h1>)}
-      {clicked === 'done' &&(<h1>Done</h1>)}
+      <div className='sorting-btns'>
+        <button type='button' className={clicked === 'all' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('all')}>All</button>
+        <button type='button' className={clicked === 'potential' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('potential')}>Potential</button>
+        <button type='button' className={clicked === 'active' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('active')}>Active</button>
+        <button type='button' className={clicked === 'done' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('done')}>Done</button>
+      </div>
+      <span style={{textAlign:'center', marginTop: '50px'}}>
+      {
+        clicked === 'all' ? <h2>All</h2> : clicked === 'potential' ? <h2>Potential</h2> : clicked === 'active' ? <h2>Active</h2> : clicked === 'done' ? <h2>Done</h2> : null
+      }
+      </span>
       <table className='table'>
         {/* Row of Headers */}
         <thead>

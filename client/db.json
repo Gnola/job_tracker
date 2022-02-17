@@ -794,7 +794,7 @@
     },
     {
       "id": "b6aa2ac8-7cab-4553-a12e-e233c184ad56",
-      "status": "Never Heard Back",
+      "status": "Offer",
       "date": "2/16",
       "company": "TEst",
       "jobTitle": "",
@@ -806,6 +806,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "91ae45a8-71f5-4e19-9c48-c276c5ab45ab",
+          "statusUpdate": "Offer",
+          "updateDate": "",
+          "updateNotes": "-"
+        },
         {
           "id": "03295944-2a1e-4e22-9b23-6661dc1a7fe0",
           "statusUpdate": "Never Heard Back",

@@ -106,7 +106,7 @@ import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
            :
            <td>{this.state.update.updateNotes}</td>
          }
-         <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => this.editUpdate(this.state.update.id)}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => this.deleteUpdate(this.state.update.id)}/></td>
+         <td><IoPencilSharp className='icon' onClick={() => this.editUpdate(this.state.update.id)}/><IoTrashSharp className='icon' style={{marginLeft:'10px'}} onClick={() => this.deleteUpdate(this.state.update.id)}/></td>
        </tr>
      );
    }
