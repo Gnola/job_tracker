@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import { Job } from './_Job.js'
+import { Job } from './_Job.js'; // Page/Consistent View
 
 export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
 

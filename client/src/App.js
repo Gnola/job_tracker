@@ -2,21 +2,21 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 
-import AddJobForm  from './_AddJobForm.js';
-import EditJobForm from './_EditJobForm.js'
-
-import { JobList } from './_JobList.js';
+import AddJobForm  from './components/AddJobForm.js'; // Component
+import EditJobForm from './components/EditJobForm.js'; // Component
+import { JobList } from './_JobList.js'; // Page/Consistent View
 
 
 function App() {
   const [jobs, setJobs] = useState([]); // Main State
+
   // Edit Job
   const [editingJob, setEditingJob] = useState(false); // Open EditJobForm Modal
   const [jobToEdit, setJobToEdit] = useState();
 
-
+  // Set State Initially
   useEffect(() => {
-    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data])) // Set State Initially
+    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data]))
   }, [])
 
   return (

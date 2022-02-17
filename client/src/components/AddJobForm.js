@@ -18,12 +18,14 @@ class AddJobForm extends React.Component {
     notes: '',
   }
 
+  // onChange
   handleChange = (e) => {
     this.setState({
       [e.target.id]:e.target.value
     })
   }
 
+  // onSubmit
   handleAddJob = (e) => {
     e.preventDefault()
     console.log(this.state);

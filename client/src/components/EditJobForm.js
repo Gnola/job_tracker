@@ -3,7 +3,6 @@ import axios from 'axios';
 import { IoCloseSharp } from "react-icons/io5";
 
 
-
 class EditJobForm extends React.Component {
   state = {
     id:this.props.jobToEdit.id,
@@ -18,18 +17,19 @@ class EditJobForm extends React.Component {
     updates:[...this.props.jobToEdit.updates]
   }
 
+  // onChange
   handleChange = (e) => {
     this.setState({
       [e.target.id]: e.target.value
     })
   }
 
+  // onSubmit
   handleSubmit = (e) => {
     e.preventDefault()
     let editedJob = {
       ...this.state
     }
-    console.log(editedJob);
     this.props.setEditingJob(!this.props.editingJob)
 
     axios.patch('http://localhost:3001/jobs/' + this.state.id, editedJob).then(res => console.log(res.data))

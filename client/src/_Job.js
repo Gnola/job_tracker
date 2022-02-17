@@ -1,16 +1,16 @@
 import React, { useState, useContext, useEffect } from 'react';
-import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
-import { v4 as uuidv4 } from 'uuid';
 import axios from 'axios';
-import JobUpdate  from './_JobUpdate.js'
-import { AddJobUpdate } from './_AddJobUpdate.js'
+import { v4 as uuidv4 } from 'uuid';
+import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
+
+import JobUpdate  from './_JobUpdate.js' // Page/Consistent View
+import { AddJobUpdate } from './components/AddJobUpdate.js' // Component
+
 
 export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
 
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
   const [statusColor, setStatusColor] = useState('') // Sets status color
-
-  const [editing, setEditing] = useState(false)
 
   useEffect(() => {
     // Apply conditional coloring for status'
@@ -62,7 +62,7 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
             }}/><IoTrashSharp style={{cursor:'pointer', marginLeft:'5px'}} onClick={() => deleteJob(job)}/>
           </td>
           :
-          <td><IoPencilSharp style={{cursor:'pointer'}} onClick={() => {setEditing(!editing)}}/></td>}
+          <td></td>}
       </tr>
       { jobOpened &&
         <>

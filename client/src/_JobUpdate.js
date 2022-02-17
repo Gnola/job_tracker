@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
 import axios from 'axios';
+import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
 
  class JobUpdate extends React.Component {
    state = {
@@ -19,25 +19,28 @@ import axios from 'axios';
        ...this.state.job,
        updates:[...newUpdates]
      }
-     // console.log(editedJob);
      axios.put('http://localhost:3001/jobs/' + this.state.job.id, editedJob).then(res => console.log(res.data))
    }
 
+   // Opens forms to edit Update
    editUpdate = (id) => {
      this.setState({
        editing:!this.state.editing
      })
    }
 
+   // onChange
    handleChange = (e) => {
      this.setState({
        [e.target.id] : e.target.value
      })
    }
 
+   // onSubmit
    handlleSubmit = (e) => {
      e.preventDefault()
 
+     // Create new update
      let newUpdate = {
        id: this.state.update.id,
        statusUpdate:this.state.statusUpdate,
@@ -45,6 +48,7 @@ import axios from 'axios';
        updateNotes:this.state.updateNotes
      }
 
+     // Refresh updates
      let newUpdates = []
      this.state.job.updates.forEach((update) => {
        if (update.id === newUpdate.id) {
@@ -54,16 +58,15 @@ import axios from 'axios';
        }
      })
 
-     console.log(this.state.job);
-
+     // Set up editedJob
      let editedJob = {
        ...this.state.job,
        updates:[...newUpdates]
      }
-     console.log(editedJob);
 
      axios.put('http://localhost:3001/jobs/' + editedJob.id, editedJob).then(res => console.log(res.data))
 
+     // Close forms to edit Update
      this.setState({
        editing:!this.state.editing
      })
