@@ -66,7 +66,7 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
       </tr>
       { jobOpened &&
         <>
-          { job.updates.length > 1 &&
+          { job.updates.length > 0 &&
             job.updates.map((update, i) => (
               <JobUpdate key={i} job={job} update={update}  />
             ))

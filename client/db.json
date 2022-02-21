@@ -336,7 +336,7 @@
       "company": "Co-op Commerce",
       "jobTitle": "React Software Engineer",
       "link": "https://jobs.lever.co/CO-OPCOMMERCE/b3d64e46-067c-4261-af80-3fa7dd350c57/apply?lever-source=LinkedIn",
-      "status": "Potential",
+      "status": "Applied",
       "jobBoard": "LinkedIn/Company Site",
       "resume": "Gianni_Nola_Resume_2022",
       "location": "",
@@ -344,6 +344,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "62dbedfa-7940-4175-818a-b3f9170a6c74",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        },
         {
           "id": "bf793f2f-5cf0-4796-9d8c-8bd3abb75359",
           "statusUpdate": "Potential",
@@ -358,7 +364,7 @@
       "company": "EvolutionIQ",
       "jobTitle": "Software Engineer",
       "link": "https://boards.greenhouse.io/evolutioniq/jobs/4286239004?s=LinkedIn&source=LinkedIn",
-      "status": "Potential",
+      "status": "Applied",
       "jobBoard": "LinkedIn/Company Site",
       "resume": "Gianni_Nola_Resume_2022",
       "location": "",
@@ -366,6 +372,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "f5d8fb60-d683-491e-acf0-6fd6d7e5af63",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        },
         {
           "id": "64a8a7b8-31c7-4adc-ba92-cbb0dec346f0",
           "statusUpdate": "Potential",
@@ -380,7 +392,7 @@
       "company": "GitBit",
       "jobTitle": "Software Engineer",
       "link": "https://angel.co/jobs?job_listing_id=1898483",
-      "status": "Potential",
+      "status": "Applied",
       "jobBoard": "Angellist",
       "resume": "",
       "location": "",
@@ -388,6 +400,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "926419b7-14d4-4e47-8a39-00d61124014f",
+          "statusUpdate": "Applied",
+          "updateDate": "1/24",
+          "updateNotes": "-"
+        },
         {
           "id": "19f72c42-17d2-4b5f-b9e3-5130a1a93ec4",
           "statusUpdate": "Potential",
@@ -414,7 +432,7 @@
           "id": "96b6e2b9-245e-4ff3-99ef-37ca7f6fc17d",
           "statusUpdate": "Phone Screen",
           "updateDate": "2/18",
-          "updateNotes": "-"
+          "updateNotes": "Talked with Aaron - Following up after Tuesday"
         },
         {
           "id": "2183ec45-3f98-4422-8c45-d29fbd221512",
@@ -794,7 +812,7 @@
           "id": "f9c64488-a0e3-47d3-948e-e48e17b6e4c8",
           "statusUpdate": "Phone Screen",
           "updateDate": "2/11",
-          "updateNotes": "Talked with Nettie - Waiting to hear back"
+          "updateNotes": "Talked with Nettie - Waiting to hear back - Emailed her 2/21"
         }
       ]
     }
