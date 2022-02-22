@@ -37,9 +37,10 @@ export const AddUpdate = ({ job }) => {
           <option value="Phone Screen">Phone Screen</option>
           <option value="Technical Interview">Technical Interview</option>
           <option value="Behavioral Interview">Behavioral Interview</option>
-          <option value="Rejected">Rejected</option>
-          <option value="Never Heard Back">Never Heard Back</option>
           <option value="Offer">Offer</option>
+          <option value="Never Heard Back">Never Heard Back</option>
+          <option value="Rejected">Rejected</option>
+          <option value="Followed Up">Followed Up</option>
         </select>
       </td>
       <td>

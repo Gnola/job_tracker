@@ -42,7 +42,7 @@
           "id": "0233fc6a-536a-49c9-9193-dde0e115ffbf",
           "statusUpdate": "Applied",
           "updateDate": "1/7",
-          "updateNotes": "-"
+          "updateNotes": "Sent Kenny Resume and forwarded it to Maegen"
         }
       ]
     },
@@ -180,7 +180,7 @@
       "company": "Evidently",
       "jobTitle": "Frontend / Full Stack",
       "link": "https://triplebyte.com/company/public/evidently-inc/QWStsBW/frontend-fullstack?fm=%7B%22match_count%22%3A2%2C%22total_count%22%3A2%2C%22matches%22%3A%5B%7B%22label%22%3A%22Will%20talk%20to%20juniors%22%2C%22values%22%3A%5B%22Yes%22%5D%7D%2C%7B%22label%22%3A%22engineering_type%22%2C%22values%22%3A%5B%22Full-Stack%20Engineer%22%2C%22Front-End%20Engineer%22%5D%7D%5D%2C%22mismatches%22%3A%5B%5D%7D",
-      "status": "Phone Screen",
+      "status": "Followed Up",
       "jobBoard": "TripleByte",
       "resume": "",
       "location": "",
@@ -188,6 +188,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "b148968e-7fad-4ca7-9a20-1c93f158f416",
+          "statusUpdate": "Followed Up",
+          "updateDate": "2/21",
+          "updateNotes": "Emailed Alex"
+        },
         {
           "id": "7907ebf5-a29d-4120-90ed-73c00458616a",
           "statusUpdate": "Phone Screen",
@@ -420,7 +426,7 @@
       "company": "Groove",
       "jobTitle": "Frontend Developer",
       "link": "https://jobs.lever.co/grooveapp/aa2e8702-8e19-4a53-bbad-ecc32f998007",
-      "status": "Phone Screen",
+      "status": "Rejected",
       "jobBoard": "LinkedIn/Company Site",
       "resume": "Gianni_Nola_Resume_2022",
       "location": "",
@@ -428,6 +434,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "a6f09565-09b2-455f-b4ef-bc4b2e6d0763",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/22",
+          "updateNotes": "-"
+        },
         {
           "id": "96b6e2b9-245e-4ff3-99ef-37ca7f6fc17d",
           "statusUpdate": "Phone Screen",
@@ -800,7 +812,7 @@
       "company": "Politech",
       "jobTitle": "Software Engineer",
       "link": "",
-      "status": "Phone Screen",
+      "status": "Rejected",
       "jobBoard": "TripleByte",
       "resume": "",
       "location": "",
@@ -809,10 +821,22 @@
       "notes": "Talked with Nettie - Waiting to hear back",
       "updates": [
         {
+          "id": "ef416740-18bf-41b6-ab20-6fce4b634c0f",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/22",
+          "updateNotes": "-"
+        },
+        {
+          "id": "4ca1964b-6723-418e-bbde-c9fdbfed421c",
+          "statusUpdate": "Followed Up",
+          "updateDate": "2/21",
+          "updateNotes": "Emailed Nettie - waiting to hear back"
+        },
+        {
           "id": "f9c64488-a0e3-47d3-948e-e48e17b6e4c8",
           "statusUpdate": "Phone Screen",
           "updateDate": "2/11",
-          "updateNotes": "Talked with Nettie - Waiting to hear back - Emailed her 2/21"
+          "updateNotes": "Talked with Nettie"
         }
       ]
     },

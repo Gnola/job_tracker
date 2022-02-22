@@ -36,6 +36,9 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
       case 'Rejected':
         setStatusColor('red')
         break;
+      case 'Followed Up':
+        setStatusColor('orange')
+        break;
       default:
         setStatusColor('black')
     }
@@ -52,23 +55,33 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
         <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline className='icon' /> : <IoChevronUpOutline className='icon' />}</td>
         <td className={jobOpened ? 'bold' : null}>{job.company}</td>
         <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
-        <td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
-        <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
-        <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
-        { !jobOpened ?
-          <td><IoPencilSharp className='icon' onClick={() => {
+        {
+          jobOpened ?
+          <>
+            <td></td>
+            <td></td>
+            <td></td>
+          </>
+          :
+          <>
+            <td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
+            <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
+            <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
+          </>
+        }
+        <td>
+          <IoPencilSharp className='icon' onClick={() => {
               setEditingJob(!editingJob)
               setJobToEdit(job)
-            }}/><IoTrashSharp className='icon' style={{marginLeft:'10px'}} onClick={() => deleteJob(job)}/>
-          </td>
-          :
-          <td></td>}
+          }}/>
+          <IoTrashSharp className='icon' style={{marginLeft:'10px'}} onClick={() => deleteJob(job)}/>
+        </td>
       </tr>
       { jobOpened &&
         <>
           { job.updates.length > 0 &&
             job.updates.map((update, i) => (
-              <JobUpdate key={i} job={job} update={update}  />
+              <JobUpdate key={i} job={job} update={update} />
             ))
           }
           <AddUpdate job={job} />
