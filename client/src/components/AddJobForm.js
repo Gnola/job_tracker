@@ -42,6 +42,21 @@ class AddJobForm extends React.Component {
       ]
     }
     axios.post('http://localhost:3001/jobs/', newJob).then(res => console.log(res.data))
+
+    this.setState({
+      id: '',
+      status:'Potential',
+      date:`${new Date().getMonth() +1}/${new Date().getDate()}`,
+      company:'',
+      jobTitle:'',
+      link:'',
+      jobBoard:'',
+      resume:'',
+      location:'',
+      category:'',
+      connections:'',
+      notes: '',
+    })
   }
 
   render() {
