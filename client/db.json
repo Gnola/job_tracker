@@ -925,6 +925,28 @@
           "updateNotes": ""
         }
       ]
+    },
+    {
+      "id": "b6de3d31-c506-4b68-9930-f22ca28fd728",
+      "status": "Applied",
+      "date": "2/21",
+      "company": "Bluebeam",
+      "jobTitle": "Web Content Developer",
+      "link": "https://www.linkedin.com/jobs/view/2921474989/?refId=01931bf4-ad8f-4036-a226-509f6f26bd2d",
+      "jobBoard": "LinkedIn/Company Site",
+      "resume": "General",
+      "location": "",
+      "category": "",
+      "connections": "",
+      "notes": "",
+      "updates": [
+        {
+          "id": "94f79068-24dd-4b01-a9ed-0c157a4cdf1e",
+          "statusUpdate": "Applied",
+          "updateDate": "2/21",
+          "updateNotes": ""
+        }
+      ]
     }
   ]
 }

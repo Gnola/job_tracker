@@ -28,7 +28,6 @@ class AddJobForm extends React.Component {
   // onSubmit
   handleAddJob = (e) => {
     e.preventDefault()
-    console.log(this.state);
     let newJob = {
       ...this.state,
       id:uuidv4(),
