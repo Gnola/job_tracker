@@ -3,8 +3,8 @@ import { Job } from './_Job.js'; // Page/Consistent View
 
 export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
 
-  const [clicked, setClicked] = useState('all') // Controls Filtered Jobs
-  const [filteredJobs, setFilteredJobs] = useState(jobs)
+  const [filtered, setFiltered] = useState('all') // Controls Filtered Jobs
+  const [filteredJobs, setFilteredJobs] = useState([])
 
   const [sorted, setSorted] = useState(false)
   const [sortedJobs, setSortedJobs] = useState([])
@@ -13,23 +13,21 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
   const handleFilter = (text) => {
     switch (text) {
       case 'all':
-        setClicked('all')
+        setFiltered('all')
         setFilteredJobs(jobs) // Set filteredJobs as default data
         break;
       case 'potential':
-        setClicked('potential')
+        setFiltered('potential')
         setFilteredJobs(jobs.filter(job => job.status === 'Potential'))
         break;
       case 'active':
-        setClicked('active')
+        setFiltered('active')
         setFilteredJobs(jobs.filter(job => job.status !== 'Rejected' && job.status !== 'Potential'))
         break;
       case 'done':
-        setClicked('done')
+        setFiltered('done')
         setFilteredJobs(jobs.filter(job => job.status == 'Rejected'))
         break;
-      default:
-        setFilteredJobs(jobs) // Set filteredJobs as default data
     }
   }
 
@@ -71,13 +69,13 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
   return (
     <>
       <div className='sorting-btns'>
-        <button type='button' className={clicked === 'all' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('all')}>All</button>
-        <button type='button' className={clicked === 'potential' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('potential')}>Potential</button>
-        <button type='button' className={clicked === 'active' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('active')}>Active</button>
-        <button type='button' className={clicked === 'done' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('done')}>Done</button>
+        <button type='button' className={filtered === 'all' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('all')}>All</button>
+        <button type='button' className={filtered === 'potential' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('potential')}>Potential</button>
+        <button type='button' className={filtered === 'active' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('active')}>Active</button>
+        <button type='button' className={filtered === 'done' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('done')}>Done</button>
       </div>
       {
-        clicked === 'all' ? <h2>All</h2> : clicked === 'potential' ? <h2>Potential</h2> : clicked === 'active' ? <h2>Active</h2> : clicked === 'done' ? <h2>Done</h2> : null
+        filtered === 'all' ? <h2>All</h2> : filtered === 'potential' ? <h2>Potential</h2> : filtered === 'active' ? <h2>Active</h2> : filtered === 'done' ? <h2>Done</h2> : null
       }
       <table className='table'>
         {/* Row of Headers */}

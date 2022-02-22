@@ -16,7 +16,7 @@ function App() {
 
   // Set State Initially
   useEffect(() => {
-    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data]))
+    axios.get("http://localhost:3001/jobs").then((res) => setJobs([...res.data].sort((a, b) => a.updates[0].updateDate < b.updates[0].updateDate ? 1 : -1))) // Automatically sorts by latest update date
   }, [])
 
   return (
