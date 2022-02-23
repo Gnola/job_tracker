@@ -438,7 +438,7 @@
           "id": "a6f09565-09b2-455f-b4ef-bc4b2e6d0763",
           "statusUpdate": "Rejected",
           "updateDate": "2/22",
-          "updateNotes": "-"
+          "updateNotes": "Responded to rejection email"
         },
         {
           "id": "96b6e2b9-245e-4ff3-99ef-37ca7f6fc17d",
@@ -824,7 +824,7 @@
           "id": "ef416740-18bf-41b6-ab20-6fce4b634c0f",
           "statusUpdate": "Rejected",
           "updateDate": "2/22",
-          "updateNotes": "-"
+          "updateNotes": "Responded to rejection email"
         },
         {
           "id": "4ca1964b-6723-418e-bbde-c9fdbfed421c",
@@ -908,7 +908,7 @@
     },
     {
       "id": "3f2838f6-ec7f-4b72-ab5a-b71871f3ab63",
-      "status": "Applied",
+      "status": "Rejected",
       "date": "2/21",
       "company": "Verana Health",
       "jobTitle": "Javascript Frontend Engineer",
@@ -920,6 +920,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "7db26d35-fd27-4485-ab36-c42b32f80b85",
+          "statusUpdate": "Rejected",
+          "updateDate": "2/23",
+          "updateNotes": "-"
+        },
         {
           "id": "bee72a7a-d86e-4304-a646-4c1a12779396",
           "statusUpdate": "Applied",
