@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
 
- class JobUpdate extends React.Component {
+ class Update extends React.Component {
    state = {
      editing: false,
      job: this.props.job,
@@ -114,4 +114,4 @@ import { IoTrashSharp, IoPencilSharp } from "react-icons/io5";
  }
 
 
-export default JobUpdate;
+export default Update;

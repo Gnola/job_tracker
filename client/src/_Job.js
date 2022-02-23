@@ -1,9 +1,9 @@
 import React, { useState, useContext, useEffect } from 'react';
 import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
-import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoPencilSharp} from "react-icons/io5";
+import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoSettingsOutline} from "react-icons/io5";
 
-import JobUpdate  from './_JobUpdate.js' // Page/Consistent View
+import Update  from './_Update.js' // Page/Consistent View
 import { AddUpdate } from './components/AddUpdate.js' // Component
 
 
@@ -70,18 +70,19 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
           </>
         }
         <td>
-          <IoPencilSharp className='icon' onClick={() => {
+          <IoSettingsOutline className='icon' onClick={() => {
               setEditingJob(!editingJob)
               setJobToEdit(job)
           }}/>
           <IoTrashSharp className='icon' style={{marginLeft:'10px'}} onClick={() => deleteJob(job)}/>
         </td>
       </tr>
-      { jobOpened &&
+      {
+        jobOpened &&
         <>
           { job.updates.length > 0 &&
             job.updates.map((update, i) => (
-              <JobUpdate key={i} job={job} update={update} />
+              <Update key={i} job={job} update={update} />
             ))
           }
           <AddUpdate job={job} />

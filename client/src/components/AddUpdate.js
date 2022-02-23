@@ -49,7 +49,7 @@ export const AddUpdate = ({ job }) => {
       <td>
         <input type='text' className="form-control" value={updateNotes} onChange={(e) => setUpdateNotes(e.target.value)}/>
       </td>
-      <td><button type='button' className='btn btn-primary sm' onClick={() => addUpdate()}><IoAddCircleSharp style={{fontSize:'1.5rem'}} /></button></td>
+      <td><button type='button' className='btn btn-primary sm' onClick={() => addUpdate()}><IoAddCircleSharp style={{fontSize:'1.2rem'}} /></button></td>
     </tr>
   );
 }
