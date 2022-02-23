@@ -5,12 +5,14 @@ import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoSettingsOutlin
 
 import Update  from './_Update.js' // Page/Consistent View
 import { AddUpdate } from './components/AddUpdate.js' // Component
+import Company from './components/_Company.js' // Component
 
 
 export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
 
   const [jobOpened, setJobOpened] = useState(false) // Toggle extra job info
   const [statusColor, setStatusColor] = useState('') // Sets status color
+  const [companyOpened, setCompanyOpened] = useState(false) // Toggle extra job info
 
   useEffect(() => {
     // Apply conditional coloring for status'
@@ -51,9 +53,10 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
 
   return (
     <>
+      { companyOpened && <Company job={job} companyOpened={companyOpened} setCompanyOpened={setCompanyOpened} />}
       <tr scope='row' className={jobOpened ? 'job' : null}>
         <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline className='icon' /> : <IoChevronUpOutline className='icon' />}</td>
-        <td className={jobOpened ? 'bold' : null}>{job.company}</td>
+        <td onClick={() => setCompanyOpened(!companyOpened)} className={jobOpened ? 'bold' : null} style={{cursor:'pointer'}}>{job.company}</td>
         <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
         {
           jobOpened ?

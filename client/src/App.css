@@ -56,3 +56,26 @@ h2 {
   .modal-title {
     margin: 0 auto;
   }
+
+#company-modal .modal-dialog {
+  max-width: 80vw;
+}
+
+
+#company-modal  .modal-body {
+  display: flex;
+  flex-wrap: wrap;
+  border:  1px solid red;
+  padding: 0;
+}
+.modal-info, .modal-resources {
+  width: 50%;
+}
+.modal-body-part {
+  width: 100%;
+  border:  1px solid blue;
+}
+
+.modal-body-part > h3 {
+  text-align: center;
+}
