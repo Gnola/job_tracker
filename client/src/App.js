@@ -2,17 +2,15 @@ import React, { useState, useEffect } from 'react';
 import './App.css';
 import axios from 'axios';
 
-import AddJobForm  from './components/AddJobForm.js'; // Component
-import EditJobForm from './components/EditJobForm.js'; // Component
-import { JobList } from './_JobList.js'; // Page/Consistent View
+import { JobList } from './components/JobList.js'; // View
+import AddJobForm  from './components/_AddJobForm.js'; // Component
+import EditJobForm from './components/_EditJobForm.js'; // Component
 
 
 function App() {
   const [jobs, setJobs] = useState([]); // Main State
-
-  // Edit Job
-  const [editingJob, setEditingJob] = useState(false); // Open EditJobForm Modal
-  const [jobToEdit, setJobToEdit] = useState();
+  const [editingJob, setEditingJob] = useState(false); // Opens EditJobForm Modal
+  const [jobToEdit, setJobToEdit] = useState(); // Sets the job to edit
 
   // Set State Initially
   useEffect(() => {
@@ -21,9 +19,9 @@ function App() {
 
   return (
     <div className="App">
-      <JobList jobs={jobs} setJobToEdit={setJobToEdit} setEditingJob={setEditingJob} editingJob={editingJob} />
-      <AddJobForm setJobs={setJobs} />
-      { editingJob && <EditJobForm jobToEdit={jobToEdit} setEditingJob={setEditingJob} editingJob={editingJob} /> }
+			<JobList jobs={jobs} setJobToEdit={setJobToEdit} setEditingJob={setEditingJob} editingJob={editingJob} />
+			<AddJobForm setJobs={setJobs} />
+			{ editingJob && <EditJobForm jobToEdit={jobToEdit} setEditingJob={setEditingJob} editingJob={editingJob} /> }
     </div>
   );
 }

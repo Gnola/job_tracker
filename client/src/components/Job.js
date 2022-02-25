@@ -3,9 +3,9 @@ import axios from 'axios';
 import { v4 as uuidv4 } from 'uuid';
 import {IoChevronDownOutline, IoChevronUpOutline, IoTrashSharp, IoSettingsOutline} from "react-icons/io5";
 
-import Update  from './_Update.js' // Page/Consistent View
-import { AddUpdate } from './components/AddUpdate.js' // Component
-import Company from './components/_Company.js' // Component
+import Update  from './_Update.js' // View
+import { AddUpdate } from './AddUpdate.js' // Component
+import Company from './_Company.js' // View
 
 
 export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {

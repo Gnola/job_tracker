@@ -1,12 +1,11 @@
 import React, { useState, useContext } from 'react';
-import { Job } from './_Job.js'; // Page/Consistent View
+import { Job } from './Job.js'; // View
 
 export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
+	const [filtered, setFiltered] = useState('all') // Controls Filtered Jobs
+	const [filteredJobs, setFilteredJobs] = useState([])
 
-  const [filtered, setFiltered] = useState('all') // Controls Filtered Jobs
-  const [filteredJobs, setFilteredJobs] = useState([])
-
-  const [sorted, setSorted] = useState(false)
+  const [sorted, setSorted] = useState(false)  // Controls Sorted Jobs
   const [sortedJobs, setSortedJobs] = useState([])
 
   // Filter jobs
@@ -79,9 +78,7 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
         <button type='button' className={filtered === 'in-progress' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('in-progress')}>In Progress</button>
         <button type='button' className={filtered === 'done' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('done')}>Done</button>
       </div>
-      {
-        filtered === 'all' ? <h2>All</h2> : filtered === 'potential' ? <h2>Potential</h2> : filtered === 'active' ? <h2>Active</h2> : filtered === 'done' ? <h2>Done</h2> : null
-      }
+      { filtered === 'all' ? <h2>All</h2> : filtered === 'potential' ? <h2>Potential</h2> : filtered === 'active' ? <h2>Active</h2> : filtered === 'done' ? <h2>Done</h2> : null }
       <table className='table'>
         {/* Row of Headers */}
         <thead>
