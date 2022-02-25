@@ -24,6 +24,10 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
         setFiltered('active')
         setFilteredJobs(jobs.filter(job => job.status !== 'Rejected' && job.status !== 'Potential'))
         break;
+      case 'in-progress':
+        setFiltered('in-progress')
+        setFilteredJobs(jobs.filter(job => job.status == 'Phone Screen'))
+        break;
       case 'done':
         setFiltered('done')
         setFilteredJobs(jobs.filter(job => job.status == 'Rejected'))
@@ -72,6 +76,7 @@ export const JobList = ({ jobs, setJobToEdit,  editingJob, setEditingJob }) => {
         <button type='button' className={filtered === 'all' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('all')}>All</button>
         <button type='button' className={filtered === 'potential' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('potential')}>Potential</button>
         <button type='button' className={filtered === 'active' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('active')}>Active</button>
+        <button type='button' className={filtered === 'in-progress' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('in-progress')}>In Progress</button>
         <button type='button' className={filtered === 'done' ? 'btn btn-primary' : "btn btn-light"} onClick={()=>handleFilter('done')}>Done</button>
       </div>
       {
