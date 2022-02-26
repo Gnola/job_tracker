@@ -4,17 +4,13 @@ import axios from 'axios';
 
 class AddJobForm extends React.Component {
   state = {
-    id: '',
     status:'Potential',
     date:`${new Date().getMonth() +1}/${new Date().getDate()}`,
-    company:'',
+		company:'',
     jobTitle:'',
     link:'',
     jobBoard:'',
     resume:'',
-    location:'',
-    category:'',
-    connections:'',
     notes: '',
   }
 
@@ -30,20 +26,49 @@ class AddJobForm extends React.Component {
     e.preventDefault()
     let newJob = {
       ...this.state,
-      id:uuidv4(),
-      updates: [
-        {
-          id: uuidv4(),
-          statusUpdate: this.state.status,
-          updateDate: this.state.date,
-          updateNotes: this.state.notes !== '' ? this.state.notes : ''
-        }
-      ]
+			// adding empty content not on form
+      id:uuidv4(), // add a random id
+			location:'',
+			connections:'',
+			interviewProcess: '',
+			requirements: '',
+			salary:'',
+			interviewer:'',
+			updates: [ // add array of updates with inital update from what was inputted into the form
+				{
+					id: uuidv4(),
+					statusUpdate: this.state.status,
+					updateDate: this.state.date,
+					updateNotes: this.state.notes
+				}
+			],
+			companyInfo: {
+				category:'',
+				whoTheyAre:'',
+				whatTheyDo:'',
+				mission:'',
+				culture:'',
+				size:'',
+				startDate:'',
+				stack:'',
+			},
+			interviewingResources: {
+				thingsToMention:'',
+				strengths:'',
+				weaknesses:'',
+				projects:'',
+				experience:'',
+				generalQuestions:'',
+				companyQuestions:'',
+				jobQuestions:'',
+				interviewerQuestions:'',
+				interviewProcessQuestions:''
+			}
     }
+		console.log(newJob);
     axios.post('http://localhost:3001/jobs/', newJob).then(res => console.log(res.data))
 
     this.setState({
-      id: '',
       status:'Potential',
       date:`${new Date().getMonth() +1}/${new Date().getDate()}`,
       company:'',
@@ -51,9 +76,6 @@ class AddJobForm extends React.Component {
       link:'',
       jobBoard:'',
       resume:'',
-      location:'',
-      category:'',
-      connections:'',
       notes: '',
     })
   }
@@ -104,24 +126,10 @@ class AddJobForm extends React.Component {
             <input type='text' className="form-control" id='resume' value={this.state.resume} onChange={this.handleChange} />
           </div>
           <div className='col'>
-            <label htmlFor="location">Location(s)</label>
-            <input type='text' className="form-control" id='location' value={this.state.location} onChange={this.handleChange} />
-          </div>
-        </div>
-        <div className='row mb-2'>
-          <div className='col'>
-            <label htmlFor="category">Category</label>
-            <input type='text' className="form-control" id='category' value={this.state.category} onChange={this.handleChange} />
-          </div>
-          <div className='col'>
-            <label htmlFor="connections">Connection(s)</label>
-            <input type='text' className="form-control" id='connections' value={this.state.connections} onChange={this.handleChange} />
-          </div>
-          <div className='col'>
             <label htmlFor="notes">Notes</label>
             <input type='text' className="form-control" id='notes' value={this.state.notes} onChange={this.handleChange} />
           </div>
-        </div>
+				</div>
         <button type='submit' className='btn btn-primary'>Add Job</button>
       </form>
     )
