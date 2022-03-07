@@ -39,8 +39,11 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
         setStatusColor('red')
         break;
       case 'Followed Up':
-        setStatusColor('orange')
+        setStatusColor('gold')
         break;
+			case 'Offer':
+				setStatusColor('lightgreen')
+				break;
       default:
         setStatusColor('black')
     }
