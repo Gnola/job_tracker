@@ -18,9 +18,8 @@ import { IoCloseSharp, IoSettingsOutline } from "react-icons/io5";
 
 
   render() {
-    const { job, view, requirements, salary } = this.state
-    const { companyOpened, setCompanyOpened, editingJob, setEditingJob, setJobToEdit } = this.props
-    console.log(view);
+    const { job, view, requirements, salary } = this.state;
+    const { companyOpened, setCompanyOpened, editingJob, setEditingJob, setJobToEdit } = this.props;
 		console.log(job);
 
     return (
@@ -45,46 +44,46 @@ import { IoCloseSharp, IoSettingsOutline } from "react-icons/io5";
               view === 'info' ?
               <div className='modal-info'>
                 <div id='job-info' className='modal-body-part'>
-                  <h3>Job Info</h3>
+                  <h3>Job / Interview Info</h3>
                   <p><strong>Job Title:</strong> {job.jobTitle}</p>
                   <p><strong>Job Board:</strong> {job.jobBoard}</p>
                   <p><strong>Resume:</strong> {job.resume}</p>
-									<p><strong>Location:</strong> {job.location}</p>
-                  <p><strong>Connection(s):</strong> {job.connections}</p>
-                  <p><strong>Requirements/Qualifications:</strong> {job.requirements}</p>
-									<p><strong>Salary: {job.salary}</strong></p>
-									<p><strong>Interviewer: {job.interviewer}</strong></p>
-                  <p><strong>Interview Process: {job.interviewProcess}</strong></p>
+                  <p><strong>Requirements/Qualifications:</strong> <br/>{job.requirements}</p>
+									<p><strong>Salary: </strong>{job.salary}</p>
+									<p><strong>Interviewer(s): </strong>{job.interviewer}</p>
+                  <p><strong>Interview Process: </strong>{job.interviewProcess}</p>
                 </div>
                 <div id='company-info' className='modal-body-part'>
                   <h3>Company Info</h3>
-									<p><strong>Who They Are:</strong> {job.companyInfo.whoTheyAre}</p>
-									<p><strong>What They Do:</strong> {job.companyInfo.whatTheyDo}</p>
-                  <p><strong>Mission/Values:</strong> {job.companyInfo.mission}</p>
-                  <p><strong>Culture:</strong> {job.companyInfo.culture}</p>
-                  <p><strong>Size:</strong> {job.companyInfo.size}</p>
-                  <p><strong>Start Date:</strong> {job.companyInfo.startDate}</p>
-									<p><strong>Category:</strong> {job.companyInfo.category}</p>
-                  <p><strong>Stack:</strong> {job.companyInfo.stack}</p>
+									<p><strong>Who They Are:</strong> <br/>{job.whoTheyAre}</p>
+									<p><strong>What They Do:</strong> <br/>{job.whatTheyDo}</p>
+                  <p><strong>Mission/Values:</strong> {job.mission}</p>
+                  <p><strong>Culture:</strong> {job.culture}</p>
+									<p><strong>Location:</strong> {job.location}</p>
+									<p><strong>Connection(s):</strong> {job.connections}</p>
+                  <p><strong>Size:</strong> {job.size}</p>
+                  <p><strong>Start Date:</strong> {job.startDate}</p>
+									<p><strong>Category:</strong> {job.category}</p>
+                  <p><strong>Stack:</strong> {job.stack}</p>
                 </div>
               </div>
               :
               <div className='modal-resources'>
                 <div id='things-to-mention' className='modal-body-part'>
                   <h3>Things to Mention / Brag List</h3>
-									<p>{job.interviewingResources.thingsToMention}</p>
-                  <p><strong>Strengths:</strong> {job.interviewingResources.strengths}</p>
-                  <p><strong>Weaknesses:</strong> {job.interviewingResources.weaknesses}</p>
-                  <p><strong>Projects:</strong> {job.interviewingResources.projects}</p>
-                  <p><strong>Experience:</strong> {job.interviewingResources.experience}</p>
+									<p>{job.thingsToMention}</p>
+                  <p><strong>Strengths:</strong> {job.strengths}</p>
+                  <p><strong>Weaknesses:</strong> {job.weaknesses}</p>
+                  <p><strong>Projects:</strong> <br/>{job.projects}</p>
+                  <p><strong>Experience:</strong> <br/>{job.experience}</p>
                 </div>
                 <div id='questions' className='modal-body-part'>
                   <h3>Questions</h3>
-									<p>{job.interviewingResources.generalQuestions}</p>
-                  <p><strong>About the Company:</strong>{job.interviewingResources.companyQuestions}</p>
-                  <p><strong>About the Job/Role:</strong> {job.interviewingResources.jobQuestions}</p>
-									<p><strong>About the Interviewer:</strong> {job.interviewingResources.interviewerQuestions}</p>
-                  <p><strong>About the Process:</strong> {job.interviewingResources.interviewProcessQuestions}</p>
+									<p>{job.generalQuestions}</p>
+                  <p><strong>About the Company:</strong><br/>{job.companyQuestions}</p>
+                  <p><strong>About the Job/Role:</strong> <br/>{job.jobQuestions}</p>
+									<p><strong>About the Interviewer:</strong> <br/>{job.interviewerQuestions}</p>
+                  <p><strong>About the Process:</strong> <br/>{job.interviewProcessQuestions}</p>
                 </div>
             	</div>
             }

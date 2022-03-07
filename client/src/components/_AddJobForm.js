@@ -4,17 +4,19 @@ import axios from 'axios';
 
 class AddJobForm extends React.Component {
   state = {
+		company:'', // Company Info
+		// Job Info
+		jobTitle:'',
+		link:'',
+		jobBoard:'',
+		resume:'',
+		// Job Info / Initial Update Info
     status:'Potential',
     date:`${new Date().getMonth() +1}/${new Date().getDate()}`,
-		company:'',
-    jobTitle:'',
-    link:'',
-    jobBoard:'',
-    resume:'',
-    notes: '',
+    notes: ''
   }
 
-  // onChange
+  // onChange - set state from inputs
   handleChange = (e) => {
     this.setState({
       [e.target.id]:e.target.value
@@ -26,14 +28,24 @@ class AddJobForm extends React.Component {
     e.preventDefault()
     let newJob = {
       ...this.state,
-			// adding empty content not on form
-      id:uuidv4(), // add a random id
-			location:'',
-			connections:'',
-			interviewProcess: '',
+			// Content NOT ON FORM
+			//  Job / Interview Info
+			id:uuidv4(),
 			requirements: '',
 			salary:'',
 			interviewer:'',
+			interviewProcess: '',
+			// Company Info
+			whoTheyAre:'',
+			whatTheyDo:'',
+			mission:'',
+			culture:'',
+			location:'',
+			connections:'',
+			size:'',
+			startDate:'',
+			category:'',
+			stack:'',
 			updates: [ // add array of updates with inital update from what was inputted into the form
 				{
 					id: uuidv4(),
@@ -42,28 +54,17 @@ class AddJobForm extends React.Component {
 					updateNotes: this.state.notes
 				}
 			],
-			companyInfo: {
-				category:'',
-				whoTheyAre:'',
-				whatTheyDo:'',
-				mission:'',
-				culture:'',
-				size:'',
-				startDate:'',
-				stack:'',
-			},
-			interviewingResources: {
-				thingsToMention:'',
-				strengths:'',
-				weaknesses:'',
-				projects:'',
-				experience:'',
-				generalQuestions:'',
-				companyQuestions:'',
-				jobQuestions:'',
-				interviewerQuestions:'',
-				interviewProcessQuestions:''
-			}
+			// Interview Resources
+			thingsToMention:'',
+			strengths:'',
+			weaknesses:'',
+			projects:'',
+			experience:'',
+			generalQuestions:'',
+			companyQuestions:'',
+			jobQuestions:'',
+			interviewerQuestions:'',
+			interviewProcessQuestions:''
     }
 		console.log(newJob);
     axios.post('http://localhost:3001/jobs/', newJob).then(res => console.log(res.data))
