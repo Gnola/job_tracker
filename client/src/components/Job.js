@@ -39,8 +39,11 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
         setStatusColor('red')
         break;
       case 'Followed Up':
-        setStatusColor('orange')
+        setStatusColor('gold')
         break;
+			case 'Offer':
+				setStatusColor('lightgreen')
+				break;
       default:
         setStatusColor('black')
     }
@@ -53,25 +56,14 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
 
   return (
     <>
-      { companyOpened && <Company job={job} companyOpened={companyOpened} setCompanyOpened={setCompanyOpened} />}
+      { companyOpened && <Company job={job} companyOpened={companyOpened} setCompanyOpened={setCompanyOpened} setJobToEdit={setJobToEdit} setEditingJob={setEditingJob} editingJob={editingJob} />}
       <tr scope='row' className={jobOpened ? 'job' : null}>
         <td onClick={() => setJobOpened(!jobOpened)}> {jobOpened ? <IoChevronDownOutline className='icon' /> : <IoChevronUpOutline className='icon' />}</td>
         <td onClick={() => setCompanyOpened(!companyOpened)} className={jobOpened ? 'bold' : null} style={{cursor:'pointer'}}>{job.company}</td>
         <td className={jobOpened ? 'bold' : null}><a href={job.link} target='_blank'>{job.jobTitle}</a></td>
-        {
-          jobOpened ?
-          <>
-            <td></td>
-            <td></td>
-            <td></td>
-          </>
-          :
-          <>
-            <td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
-            <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
-            <td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
-          </>
-        }
+				<td className={jobOpened ? 'bold' : null} style={{color:statusColor}} >{job.updates.length < 1 ? job.status : job.updates[0]?.statusUpdate}</td>
+				<td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateDate}</td>
+				<td className={jobOpened ? 'bold' : null}>{job.updates[0]?.updateNotes}</td>
         <td>
           <IoSettingsOutline className='icon' onClick={() => {
               setEditingJob(!editingJob)
@@ -89,15 +81,6 @@ export const Job = ({job, today, setJobToEdit, editingJob, setEditingJob}) => {
             ))
           }
           <AddUpdate job={job} />
-          <tr className={jobOpened ? 'job': null}>
-            <td></td>
-            <td><strong>Job Board:</strong> {job.jobBoard}</td>
-            <td><strong>Resume:</strong> {job.resume}</td>
-            <td><strong>Location(s):</strong> {job.location}</td>
-            <td><strong>Category:</strong> {job.category}</td>
-            <td><strong>Connection(s):</strong> {job.connections}</td>
-            <td></td>
-          </tr>
         </>
       }
     </>
