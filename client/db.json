@@ -6,7 +6,7 @@
       "company": "Vector",
       "jobTitle": "Solutions Engineer",
       "link": "https://www.withvector.com/company/careers?gh_jid=4019568004",
-      "status": "Phone Screen",
+      "status": "Behavioral Interview",
       "jobBoard": "",
       "resume": "Gianni_Nola_Resume_2022",
       "location": "Remote",
@@ -14,6 +14,18 @@
       "connections": "Kenny",
       "notes": "",
       "updates": [
+        {
+          "id": "f9b4dfe9-850a-41d6-990b-fe8656021a70",
+          "statusUpdate": "Behavioral Interview",
+          "updateDate": "3/17",
+          "updateNotes": "Project Presentation + Breakout Sessions"
+        },
+        {
+          "id": "3385ac28-a7ce-4d1a-80f2-e8b32bf320bc",
+          "statusUpdate": "Technical Interview",
+          "updateDate": "3/03",
+          "updateNotes": "Tech Screen w/ Anthony and David"
+        },
         {
           "id": "73d7c0b7-e53f-47cc-9659-c89673166b63",
           "statusUpdate": "Phone Screen",
@@ -864,7 +876,7 @@
     },
     {
       "id": "5065d8bf-3dda-4fd5-ab82-15d3d16ed387",
-      "status": "Applied",
+      "status": "Rejected",
       "date": "2/21",
       "company": "Vonage",
       "jobTitle": "Frontend Engineer",
@@ -877,6 +889,12 @@
       "notes": "",
       "updates": [
         {
+          "id": "8a2a7f38-370c-4f15-9789-4c88aeb4aef1",
+          "statusUpdate": "Rejected",
+          "updateDate": "3/01",
+          "updateNotes": "-"
+        },
+        {
           "id": "c608e577-8e4f-4413-8a9b-5a3c6e471167",
           "statusUpdate": "Applied",
           "updateDate": "2/21",
@@ -886,7 +904,7 @@
     },
     {
       "id": "9b218d19-9dbe-415d-8b64-4ce38c0116af",
-      "status": "Applied",
+      "status": "Rejected",
       "date": "2/21",
       "company": "Superhuman",
       "jobTitle": "Frontend Engineer",
@@ -898,6 +916,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "48c663dd-da2b-4380-bc18-aea95595d19d",
+          "statusUpdate": "Rejected",
+          "updateDate": "3/14",
+          "updateNotes": "-"
+        },
         {
           "id": "6e4dc14b-635d-4bbd-92a4-2ea957b5e2cd",
           "statusUpdate": "Applied",
@@ -1002,7 +1026,7 @@
     },
     {
       "id": "b7e8b36f-ad0e-4126-bc7c-5da371a88ba9",
-      "status": "Applied",
+      "status": "Rejected",
       "date": "2/25",
       "company": "Transfix",
       "jobTitle": "Frontend Engineer",
@@ -1014,6 +1038,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "7774534c-992d-4640-8867-28d789a7f651",
+          "statusUpdate": "Rejected",
+          "updateDate": "3/02",
+          "updateNotes": "-"
+        },
         {
           "id": "fc40a34d-9dc8-4c4d-a9e9-03088f899986",
           "statusUpdate": "Applied",
@@ -1046,7 +1076,7 @@
     },
     {
       "id": "c85b8e29-442b-4d3f-abba-e0e9dab21532",
-      "status": "Applied",
+      "status": "Rejected",
       "date": "2/25",
       "company": "Terakeet",
       "jobTitle": "Frontend Engineer",
@@ -1059,12 +1089,110 @@
       "notes": "",
       "updates": [
         {
+          "id": "af525982-7fce-47be-be1b-9ca2fe787a2a",
+          "statusUpdate": "Rejected",
+          "updateDate": "3/08",
+          "updateNotes": "-"
+        },
+        {
           "id": "7066e9f9-3a99-47a8-ace8-376afd2040c0",
           "statusUpdate": "Applied",
           "updateDate": "2/25",
           "updateNotes": ""
         }
       ]
+    },
+    {
+      "company": "MoneyDolly",
+      "jobTitle": "React Front End",
+      "link": "https://www.linkedin.com/jobs/view/2940534229/?midToken=AQFeItMEEQGO9Q&midSig=1LclcfH62AEW81&trk=eml-jobs_applicant_applied-applied_jobs-13-applied_job&trkEmail=eml-jobs_applicant_applied-applied_jobs-13-applied_job-null-amzvur%7El08f0tjp%7Evt-null-jobs%7Eview",
+      "jobBoard": "LinkedIn",
+      "resume": "Frontend",
+      "status": "Applied",
+      "date": "3/01",
+      "notes": "",
+      "id": "b9b823f3-7860-4f84-b195-d6b2df900514",
+      "requirements": "",
+      "salary": "",
+      "interviewer": "",
+      "interviewProcess": "",
+      "whoTheyAre": "",
+      "whatTheyDo": "",
+      "mission": "",
+      "culture": "",
+      "location": "",
+      "connections": "",
+      "size": "",
+      "startDate": "",
+      "category": "",
+      "stack": "",
+      "updates": [
+        {
+          "id": "0bf801fd-f5fc-47a1-bea7-425dbbbfb5ce",
+          "statusUpdate": "Applied",
+          "updateDate": "3/01",
+          "updateNotes": ""
+        }
+      ],
+      "thingsToMention": "",
+      "strengths": "",
+      "weaknesses": "",
+      "projects": "",
+      "experience": "",
+      "generalQuestions": "",
+      "companyQuestions": "",
+      "jobQuestions": "",
+      "interviewerQuestions": "",
+      "interviewProcessQuestions": ""
+    },
+    {
+      "company": "Swift Solar",
+      "jobTitle": "Software Engineer",
+      "link": "",
+      "jobBoard": "Climatebase",
+      "resume": "",
+      "status": "Potential",
+      "date": "3/21",
+      "notes": "They reached out via email",
+      "id": "02bc22d1-ff66-4911-bdb0-634d1954c50a",
+      "requirements": "",
+      "salary": "",
+      "interviewer": "",
+      "interviewProcess": "",
+      "whoTheyAre": "",
+      "whatTheyDo": "",
+      "mission": "",
+      "culture": "",
+      "location": "",
+      "connections": "",
+      "size": "",
+      "startDate": "",
+      "category": "",
+      "stack": "",
+      "updates": [
+        {
+          "id": "d7b130a9-466f-4d99-a9fe-182f2616d50f",
+          "statusUpdate": "Potential",
+          "updateDate": "3/21",
+          "updateNotes": "Responded to their email"
+        },
+        {
+          "id": "6b612f61-b60a-4a5e-ab85-8111586f4fcf",
+          "statusUpdate": "Potential",
+          "updateDate": "3/21",
+          "updateNotes": "They reached out via email"
+        }
+      ],
+      "thingsToMention": "",
+      "strengths": "",
+      "weaknesses": "",
+      "projects": "",
+      "experience": "",
+      "generalQuestions": "",
+      "companyQuestions": "",
+      "jobQuestions": "",
+      "interviewerQuestions": "",
+      "interviewProcessQuestions": ""
     }
   ]
 }
