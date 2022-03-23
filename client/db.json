@@ -1060,7 +1060,7 @@
     },
     {
       "id": "4efe3ede-5709-483a-b809-07ff0689b9e2",
-      "status": "Applied",
+      "status": "Rejected",
       "date": "2/25",
       "company": "Social Native",
       "jobTitle": "Frontend Engineer",
@@ -1072,6 +1072,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "18b88336-1458-4d13-9833-99fc231776e3",
+          "statusUpdate": "Rejected",
+          "updateDate": "3/23",
+          "updateNotes": "-"
+        },
         {
           "id": "5b271d76-453d-4125-9a12-01ec6b0c0568",
           "statusUpdate": "Applied",
