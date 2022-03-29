@@ -6,7 +6,7 @@
       "company": "Vector",
       "jobTitle": "Solutions Engineer",
       "link": "https://www.withvector.com/company/careers?gh_jid=4019568004",
-      "status": "Behavioral Interview",
+      "status": "Offer",
       "jobBoard": "",
       "resume": "Gianni_Nola_Resume_2022",
       "location": "Remote",
@@ -14,6 +14,12 @@
       "connections": "Kenny",
       "notes": "",
       "updates": [
+        {
+          "id": "2cd8f562-71af-4d4b-b9dd-3eaae605be55",
+          "statusUpdate": "Offer",
+          "updateDate": "3/23",
+          "updateNotes": "WAHOOOOO"
+        },
         {
           "id": "f9b4dfe9-850a-41d6-990b-fe8656021a70",
           "statusUpdate": "Behavioral Interview",
@@ -814,7 +820,7 @@
           "id": "437f7cae-4f8d-44c5-bceb-bca55a37645c",
           "statusUpdate": "Applied",
           "updateDate": "2/09",
-          "updateNotes": "-"
+          "updateNotes": "Received email about tech screen"
         }
       ]
     },
@@ -854,7 +860,7 @@
     },
     {
       "id": "c26fdca2-bcd8-4d38-9b95-9ae58d9d187e",
-      "status": "Never Heard Back",
+      "status": "Rejected",
       "date": "2/21",
       "company": "Business Wire",
       "jobTitle": "Frontend Engineer",
@@ -866,6 +872,12 @@
       "connections": "",
       "notes": "",
       "updates": [
+        {
+          "id": "11941395-bec5-4d28-8b32-a35814a664e9",
+          "statusUpdate": "Rejected",
+          "updateDate": "3/29",
+          "updateNotes": "-"
+        },
         {
           "id": "bac7a46c-8f9e-4267-b3aa-9bdf3702f70b",
           "statusUpdate": "Never Heard Back",
@@ -1714,7 +1726,7 @@
           "id": "d8bde5ac-73e8-4c1b-a169-2c1640a59c21",
           "statusUpdate": "Applied",
           "updateDate": "3/21",
-          "updateNotes": ""
+          "updateNotes": "Received email about next step"
         }
       ],
       "thingsToMention": "",
